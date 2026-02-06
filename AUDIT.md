@@ -161,3 +161,26 @@
 - La migration de données est massive (~450M enregistrements au total, 10 ans d'écritures comptables)
 - Le CDC mentionne Apache Kafka et Control-M comme composants d'intégration existants — information structurante pour l'architecture cible
 - Les obligations de facturation électronique varient par pays (Factur-X FR, SDI IT, SII ES, SAF-T nordiques) — complexité multi-pays significative
+
+---
+
+## 2026-02-06 — Réconciliation inter-domaines et consolidation glossaire (Phase 5)
+
+**Action** : Analyse croisée des 7 fichiers d'entités et des 7 fichiers de règles de gestion. Enrichissement de la matrice de partage des entités, identification des incohérences (nommage, asymétries, conflits de règles). Consolidation du glossaire avec ~30 termes manquants.
+
+**Fichiers modifiés** :
+- `00-contexte/referentiels-transverses.md` : matrice élargie (+5 entités : Réception, Retour/Avoir, Magasin, Prix de revient, Lot/N° de série), flux retour ajouté, nouvelles sections (incohérences de nommage, références croisées asymétriques, conflits entre règles, entités implicites non modélisées), zones de friction passées de 8 à 12
+- `00-contexte/glossaire.md` : restructuré en 6 catégories (techniques, métier/finance, conformité fiscale, standards techniques, retail, projet), ajout de ~30 entrées manquantes (Factur-X, SDI, SII, SAF-T, ViDA, EDIFACT, DPIA, SIEM, HSM, WCAG, JWT, OAuth, Three-way matching, Cross-docking, Ship from store, etc.)
+- `PROGRESS.md` : Phase 5 complétée
+
+**Décisions** :
+- 5 incohérences de nommage identifiées (Article vs Article stock, Entrepôt vs Site de stockage, etc.)
+- 5 références croisées asymétriques documentées (un domaine mentionne le partage, l'autre non)
+- 6 conflits ou chevauchements entre règles de gestion inter-domaines documentés
+- 4 entités implicites identifiées (Magasin, Canal de vente, Devise, Société/Entité juridique)
+- 12 zones de friction consolidées (vs 8 en Phase 3), avec niveau de sévérité ajouté
+
+**Points d'attention** :
+- L'entité « Magasin / Point de vente » est utilisée par 4 domaines mais jamais modélisée explicitement — c'est un risque pour le TP
+- Le conflit de latence entre remontée ventes (5 min) et synchronisation stock en pic (15 min) est un excellent cas d'exploration pour l'atelier
+- La gouvernance des écritures comptables automatiques (SE vs FC) est une question d'arbitrage pertinente pour les participants

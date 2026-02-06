@@ -1,7 +1,7 @@
 # Progression de l'analyse du CDC ERP Retail
 
 > **Source** : CDC_ERP_Retail_Partie1.docx (AO-2026-ERP-001)
-> **Statut global** : En cours - Phase d'analyse par domaine
+> **Statut global** : En cours - Réconciliation terminée, préparation TP à venir
 
 ---
 
@@ -40,9 +40,9 @@
 
 ## Phase 5 : Réconciliation et cohérence
 
-- [ ] Vérification des entités partagées entre domaines
-- [ ] Identification des incohérences inter-domaines
-- [ ] Consolidation du glossaire
+- [x] Vérification des entités partagées entre domaines
+- [x] Identification des incohérences inter-domaines
+- [x] Consolidation du glossaire
 
 ## Phase 6 : Préparation de la zone d'exploration (TP)
 
