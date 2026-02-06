@@ -1,7 +1,7 @@
 # Progression de l'analyse du CDC ERP Retail
 
 > **Source** : CDC_ERP_Retail_Partie1.docx (AO-2026-ERP-001)
-> **Statut global** : En cours - Réconciliation terminée, préparation TP à venir
+> **Statut global** : Terminé - Toutes les phases complétées
 
 ---
 
@@ -46,7 +46,7 @@
 
 ## Phase 6 : Préparation de la zone d'exploration (TP)
 
-- [ ] Template flux inter-modules
-- [ ] Template zones de friction
-- [ ] Template matrice de dépendances
-- [ ] Template questions d'arbitrage
+- [x] Cartographie des flux inter-modules (36 flux + 7 dépendances cachées)
+- [x] Zones de friction (7 entités + 7 référentiels + 8 intégrations implicites)
+- [x] Matrice de dépendances et séquencement (5 phases + vagues géo)
+- [x] Questions d'arbitrage (6 incohérences + 7 flux manquants + 10 hypothèses)

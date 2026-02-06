@@ -184,3 +184,28 @@
 - L'entité « Magasin / Point de vente » est utilisée par 4 domaines mais jamais modélisée explicitement — c'est un risque pour le TP
 - Le conflit de latence entre remontée ventes (5 min) et synchronisation stock en pic (15 min) est un excellent cas d'exploration pour l'atelier
 - La gouvernance des écritures comptables automatiques (SE vs FC) est une question d'arbitrage pertinente pour les participants
+
+---
+
+## 2026-02-06 — Préparation de la zone d'exploration TP (Phase 6)
+
+**Action** : Remplissage complet des 4 fichiers d'exploration à partir de l'ensemble des analyses (domaines, exigences, réconciliation). Mise à jour du README d'exploration.
+
+**Fichiers modifiés** :
+- `exploration/flux-inter-modules.md` : 36 flux catalogués (18 opérationnels avec références aux règles de gestion, 6 flux référentiels, 12 flux systèmes externes), diagramme d'architecture ASCII, 7 dépendances cachées identifiées
+- `exploration/zones-friction.md` : 7 entités partagées avec visions divergentes détaillées, 7 données référentielles problématiques, 8 points d'intégration implicites avec analyse de risque
+- `exploration/matrice-dependances.md` : matrice 7×7 corrigée (domaines actuels), 11 dépendances détaillées avec caractère contournable, chemin critique, séquencement en 5 phases (0-4), variante par vagues géographiques (5 vagues), 5 risques liés au séquencement
+- `exploration/questions-arbitrage.md` : 6 incohérences inter-SF priorisées, 7 flux manquants mais nécessaires, 10 hypothèses d'intégration à valider avec questions formulées pour le client
+- `exploration/README.md` : mis à jour avec les chiffres de chaque étape et les instructions d'utilisation pour l'atelier
+- `PROGRESS.md` : Phase 6 complétée, statut global « Terminé »
+
+**Décisions** :
+- Les templates ont été remplis de manière complète (pas de zones vides) pour servir de référence aux facilitateurs de l'atelier
+- La matrice de dépendances a été corrigée pour refléter les 7 domaines actuels (l'ancienne version utilisait les domaines obsolètes)
+- Le séquencement propose SE comme goulot d'étranglement (4 domaines en dépendent) — point structurant pour les discussions d'atelier
+- Les 10 questions d'arbitrage sont formulées comme des questions ouvertes directement posables au client
+
+**Points d'attention** :
+- Les 6 phases de PROGRESS.md sont toutes terminées — le projet de préparation du TP est complet
+- Les questions d'arbitrage les plus impactantes (P1) sont : référentiel article, référentiel client, calcul ATP, promotion GC/CM, déclenchement facturation
+- Le séquencement proposé est discutable et constitue un excellent sujet de débat pour l'atelier
