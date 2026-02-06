@@ -24,13 +24,13 @@
 
 | Domaine | Spécifications | Entités | Règles de gestion | Statut |
 |---------|:-:|:-:|:-:|--------|
-| Gestion commerciale | [ ] | [ ] | [ ] | A faire |
-| Achats & approvisionnement | [ ] | [ ] | [ ] | A faire |
-| Supply chain & logistique | [ ] | [ ] | [ ] | A faire |
-| Finance & comptabilité | [ ] | [ ] | [ ] | A faire |
-| Stocks & entrepôts (WMS) | [ ] | [ ] | [ ] | A faire |
-| CRM & marketing | [ ] | [ ] | [ ] | A faire |
-| Reporting & BI | [ ] | [ ] | [ ] | A faire |
+| Gestion commerciale | [x] | [x] | [x] | **Terminé** |
+| Achats & approvisionnement | [x] | [x] | [x] | **Terminé** |
+| Supply chain & logistique | [x] | [x] | [x] | **Terminé** |
+| Finance & comptabilité | [x] | [x] | [x] | **Terminé** |
+| Stocks & entrepôts (WMS) | [x] | [x] | [x] | **Terminé** |
+| CRM & marketing | [x] | [x] | [x] | **Terminé** |
+| Reporting & BI | [x] | [x] | [x] | **Terminé** |
 
 ## Phase 4 : Exigences transverses
 

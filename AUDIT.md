@@ -76,3 +76,44 @@
 - 7 domaines finaux alignés sur le CDC section 3.1 : gestion-commerciale, achats-approvisionnement, supply-chain-logistique, finance-comptabilite, stocks-entrepots, crm-marketing, reporting-bi
 - Découpage du CDC en fichiers séparés pour optimiser la fenêtre de contexte lors de l'analyse domaine par domaine
 - Sections 4-5 (modalités AO, contrat) conservées mais non prioritaires pour le TP
+
+---
+
+## 2026-02-06 — Analyse complète des 7 domaines métier (Phase 3)
+
+**Action** : Remplissage des 3 fichiers (specifications.md, entites.md, regles-gestion.md) pour chacun des 7 domaines métier à partir des fichiers CDC découpés. Mise à jour du PROGRESS.md après chaque domaine. Mise à jour du README des domaines (qui était obsolète).
+
+**Fichiers modifiés** :
+- `domaines/gestion-commerciale/specifications.md` : périmètre, 4 processus, 7 cas d'usage (CDC 3.1.1)
+- `domaines/gestion-commerciale/entites.md` : 10 entités, modèle conceptuel, 4 entités partagées
+- `domaines/gestion-commerciale/regles-gestion.md` : 11 règles, 4 contraintes métier
+- `domaines/achats-approvisionnement/specifications.md` : périmètre, 5 processus, 7 cas d'usage (CDC 3.1.2)
+- `domaines/achats-approvisionnement/entites.md` : 10 entités, modèle conceptuel, 4 entités partagées
+- `domaines/achats-approvisionnement/regles-gestion.md` : 11 règles, 4 contraintes métier
+- `domaines/supply-chain-logistique/specifications.md` : périmètre, 5 processus, 7 cas d'usage (CDC 3.1.3)
+- `domaines/supply-chain-logistique/entites.md` : 9 entités, modèle conceptuel, 6 entités partagées
+- `domaines/supply-chain-logistique/regles-gestion.md` : 11 règles, 4 contraintes métier
+- `domaines/finance-comptabilite/specifications.md` : périmètre, 7 processus, 8 cas d'usage (CDC 3.1.4)
+- `domaines/finance-comptabilite/entites.md` : 11 entités, modèle conceptuel, 6 entités partagées
+- `domaines/finance-comptabilite/regles-gestion.md` : 14 règles, 5 contraintes métier
+- `domaines/stocks-entrepots/specifications.md` : périmètre, 5 processus, 7 cas d'usage (CDC 3.1.5)
+- `domaines/stocks-entrepots/entites.md` : 10 entités, modèle conceptuel, 6 entités partagées
+- `domaines/stocks-entrepots/regles-gestion.md` : 13 règles, 4 contraintes métier
+- `domaines/crm-marketing/specifications.md` : périmètre, 6 processus, 7 cas d'usage (CDC 3.1.6)
+- `domaines/crm-marketing/entites.md` : 9 entités, modèle conceptuel, 4 entités partagées
+- `domaines/crm-marketing/regles-gestion.md` : 12 règles, 4 contraintes métier
+- `domaines/reporting-bi/specifications.md` : périmètre, 6 processus, 7 cas d'usage (CDC 3.1.7)
+- `domaines/reporting-bi/entites.md` : 8 entités, modèle conceptuel, 4 entités partagées
+- `domaines/reporting-bi/regles-gestion.md` : 10 règles, 4 contraintes métier
+- `domaines/README.md` : mis à jour avec les 7 domaines finaux et la structure par domaine
+- `PROGRESS.md` : 7 domaines marqués terminés dans la Phase 3
+
+**Décisions** :
+- Chaque domaine a été analysé à partir de son fichier CDC découpé correspondant
+- Les entités partagées entre domaines ont été identifiées systématiquement pour préparer la Phase 5 (réconciliation)
+- Les règles de gestion incluent les volumétries et seuils chiffrés mentionnés dans le CDC
+- Les fichiers manquants (stocks-entrepots, reporting-bi) ont été créés car les répertoires étaient vides
+
+**Points d'attention** :
+- Les entités partagées (Client, Article, Stock, Fournisseur) apparaissent dans plusieurs domaines — la réconciliation (Phase 5) sera importante
+- Le domaine Finance est le plus riche en processus (7) et règles (14) en raison de la complexité multi-pays/multi-normes
