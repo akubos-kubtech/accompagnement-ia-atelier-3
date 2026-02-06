@@ -117,3 +117,25 @@
 **Points d'attention** :
 - Les entités partagées (Client, Article, Stock, Fournisseur) apparaissent dans plusieurs domaines — la réconciliation (Phase 5) sera importante
 - Le domaine Finance est le plus riche en processus (7) et règles (14) en raison de la complexité multi-pays/multi-normes
+
+---
+
+## 2026-02-06 — Enrichissement du contexte général (4 artefacts complémentaires)
+
+**Action** : Création de 4 fichiers de contexte complémentaires pour combler les lacunes identifiées avant la Phase 4. Ces artefacts consolident des informations disséminées dans le CDC et dans les 7 analyses de domaine.
+
+**Fichiers créés** :
+- `00-contexte/acteurs-roles.md` : gouvernance projet, directions métier, 18 rôles opérationnels, acteurs externes, matrice acteurs × domaines
+- `00-contexte/volumetries-cles.md` : chiffres clés consolidés (groupe, transactionnels, stocks, achats, clients, finance, IT)
+- `00-contexte/integrations-cibles.md` : 10 systèmes conservés avec détail des flux, modes et SLA cibles, schéma d'architecture simplifié
+- `00-contexte/referentiels-transverses.md` : 4 entités maîtresses détaillées, matrice de partage (12 entités × 7 domaines), 5 flux inter-entités critiques, 8 zones de friction anticipées
+
+**Décisions** :
+- Ces artefacts complètent la Phase 1 (contexte général) qui était insuffisante pour les besoins du TP
+- Les zones de friction anticipées (référentiels-transverses.md) alimenteront directement les exercices d'exploration (Phase 6)
+- L'ERP est confirmé comme référentiel maître pour Client (vs Salesforce) et Article (vs Akeneo) — cette convention est structurante
+
+**Points d'attention** :
+- WMS multi-pays : seul Manhattan Associates (France) est documenté dans le CDC — les WMS des filiales internationales ne sont pas précisés
+- 14 langues à supporter — potentiel impact sur le paramétrage et les tests
+- La matrice acteurs × domaines pourra servir de base pour l'atelier (identification des parties prenantes par flux)
