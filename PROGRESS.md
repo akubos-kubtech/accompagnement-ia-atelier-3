@@ -1,21 +1,22 @@
 # Progression de l'analyse du CDC ERP Retail
 
 > **Source** : CDC_ERP_Retail_Partie1.docx (AO-2026-ERP-001)
-> **Statut global** : En cours - Phase de structuration
+> **Statut global** : En cours - Phase d'analyse par domaine
 
 ---
 
 ## Phase 1 : Extraction du contexte général
 
-- [ ] Glossaire des termes et acronymes
-- [ ] Synthèse du projet (vision, objectifs stratégiques)
-- [ ] Cartographie de l'existant (SI actuel, points de friction)
+- [x] Glossaire des termes et acronymes
+- [x] Synthèse du projet (vision, objectifs stratégiques)
+- [x] Cartographie de l'existant (SI actuel, points de friction)
 
 ## Phase 2 : Identification et découpage des domaines métiers
 
-- [ ] Identification des domaines depuis le périmètre fonctionnel (section 3.1)
-- [ ] Validation de la liste des domaines
-- [ ] Création des répertoires par domaine
+- [x] Identification des domaines depuis le périmètre fonctionnel (section 3.1)
+- [x] Validation de la liste des domaines (7 domaines alignés sur le CDC)
+- [x] Création des répertoires par domaine
+- [x] Découpage du CDC en fichiers séparés par domaine (`cdc-decoupe/`)
 
 ## Phase 3 : Analyse par domaine métier
 
@@ -25,11 +26,11 @@
 |---------|:-:|:-:|:-:|--------|
 | Gestion commerciale | [ ] | [ ] | [ ] | A faire |
 | Achats & approvisionnement | [ ] | [ ] | [ ] | A faire |
-| Stocks & logistique | [ ] | [ ] | [ ] | A faire |
+| Supply chain & logistique | [ ] | [ ] | [ ] | A faire |
 | Finance & comptabilité | [ ] | [ ] | [ ] | A faire |
-| Relation client | [ ] | [ ] | [ ] | A faire |
-| Produits & catalogue | [ ] | [ ] | [ ] | A faire |
-| Commerce international | [ ] | [ ] | [ ] | A faire |
+| Stocks & entrepôts (WMS) | [ ] | [ ] | [ ] | A faire |
+| CRM & marketing | [ ] | [ ] | [ ] | A faire |
+| Reporting & BI | [ ] | [ ] | [ ] | A faire |
 
 ## Phase 4 : Exigences transverses
 

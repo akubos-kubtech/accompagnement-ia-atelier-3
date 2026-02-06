@@ -44,3 +44,35 @@
 **Décisions** :
 - R1 : proposer un commit après chaque action significative (sans committer sans confirmation)
 - R2 : mettre à jour AUDIT.md avant chaque commit
+
+---
+
+## 2026-02-06 — Analyse du CDC et restructuration des domaines
+
+**Action** : Lecture complète du CDC (190k caractères, 1506 paragraphes). Restructuration des domaines pour correspondre à la section 3.1 du CDC. Découpage du CDC en fichiers séparés par domaine/section.
+
+**Fichiers créés** :
+- `cdc-decoupe/` : 14 fichiers découpés du CDC par section (domaines ~2.5k chacun, exigences ~25k chacun)
+
+**Fichiers modifiés** :
+- `00-contexte/glossaire.md` : rempli depuis sections 1.4 et Annexe H
+- `00-contexte/synthese-projet.md` : rempli depuis sections 1-2
+- `00-contexte/cartographie-existant.md` : rempli depuis section 2.3
+- `PROGRESS.md` : phases 1 et 2 complétées
+
+**Fichiers supprimés** :
+- `domaines/produits-catalogue/` : domaine transversal (PIM Akeneo conservé), pas un domaine CDC
+- `domaines/commerce-international/` : ventilé dans achats/finance/logistique, pas un domaine CDC distinct
+
+**Fichiers renommés** :
+- `domaines/stocks-logistique/` → `domaines/supply-chain-logistique/` (alignement CDC 3.1.3)
+- `domaines/relation-client/` → `domaines/crm-marketing/` (alignement CDC 3.1.6)
+
+**Fichiers ajoutés** :
+- `domaines/stocks-entrepots/` (nouveau domaine, CDC 3.1.5)
+- `domaines/reporting-bi/` (nouveau domaine, CDC 3.1.7)
+
+**Décisions** :
+- 7 domaines finaux alignés sur le CDC section 3.1 : gestion-commerciale, achats-approvisionnement, supply-chain-logistique, finance-comptabilite, stocks-entrepots, crm-marketing, reporting-bi
+- Découpage du CDC en fichiers séparés pour optimiser la fenêtre de contexte lors de l'analyse domaine par domaine
+- Sections 4-5 (modalités AO, contrat) conservées mais non prioritaires pour le TP

@@ -1,0 +1,48 @@
+3.4 Exigences de sécurité et de conformité réglementaire
+La sécurité et la conformité réglementaire sont des exigences non négociables pour un ERP gérant les données sensibles d'un groupe international. Les candidats devront démontrer leur maturité en matière de sécurité et leur capacité à accompagner le Groupe dans le respect des multiples réglementations applicables.
+3.4.1 Sécurité des infrastructures et des applications
+La sécurité de l'infrastructure d'hébergement est la première ligne de défense. Pour une solution SaaS, l'éditeur devra démontrer la robustesse : datacenters certifiés, segmentation réseau, firewalls et WAF, IDS/IPS, protection DDoS. Les rapports d'audit de sécurité seront fournis annuellement.
+La sécurité applicative repose sur des pratiques de développement sécurisé (Security by Design). L'éditeur présentera son processus intégrant la sécurité : revue de code, tests SAST/DAST, gestion des vulnérabilités, formation OWASP. Les failles critiques seront corrigées immédiatement.
+Le chiffrement des données est une mesure fondamentale. Les données seront chiffrées en transit (TLS 1.3) et au repos (AES-256). La gestion des clés sera rigoureuse avec rotation régulière et stockage HSM.
+La gestion des vulnérabilités sera proactive. L'éditeur devra disposer d'un processus de veille et d'un plan de réponse aux incidents. Les correctifs critiques seront appliqués dans les plus brefs délais. Le Groupe sera informé des incidents selon une procédure définie.
+Les tests de sécurité réguliers incluront des pentests annuels par un prestataire indépendant. L'éditeur autorisera le Groupe à réaliser ses propres audits. Les scans de vulnérabilité seront exécutés mensuellement.
+La journalisation des événements de sécurité alimentera les capacités de détection. Tous les événements significatifs seront tracés et exportables vers le SIEM du Groupe. La rétention des logs sera de 12 mois minimum.
+3.4.2 Gestion des identités et des accès (IAM)
+L'intégration avec Microsoft Entra ID (ex Azure AD) est impérative pour centraliser la gestion des utilisateurs. Les utilisateurs se connecteront avec leurs identifiants d'entreprise via SSO avec authentification multifacteur obligatoire.
+Le second facteur d'authentification pourra être une application (Microsoft Authenticator), un SMS ou un token physique. Les accès depuis des réseaux non maîtrisés pourront être soumis à des contrôles renforcés.
+Le modèle d'habilitation permettra une gestion fine des droits selon le principe du moindre privilège. Les rôles applicatifs prédéfinis seront personnalisables. Les droits seront attribuables par fonctionnalité, par données et par action.
+Le provisioning et deprovisioning des comptes seront automatisés via l'intégration avec les systèmes RH et l'annuaire. L'arrivée, le départ et les mutations seront gérés automatiquement pour éliminer les risques liés aux oublis.
+Les comptes à privilèges feront l'objet de mesures renforcées : accès strictement limité et tracé, comptes nominatifs, sessions enregistrées pour les actions sensibles, revue trimestrielle des habilitations privilégiées.
+La séparation des tâches (Segregation of Duties - SoD) sera implémentée. Des règles identifieront les combinaisons de droits incompatibles. L'ERP alertera en cas de violation lors de l'attribution des droits et générera des rapports d'anomalies.
+3.4.3 Conformité (RGPD, réglementations douanières, normes comptables internationales)
+La conformité RGPD est une obligation légale. L'ERP devra intégrer nativement : registre des traitements, gestion des consentements, exercice des droits des personnes, notification des violations, analyse d'impact. L'éditeur sera qualifié de sous-traitant au sens du RGPD.
+Les réglementations douanières devront être supportées : nomenclatures douanières, calcul des droits et taxes, génération des documents douaniers, suivi des régimes particuliers. La mise à jour des réglementations sera assurée par l'éditeur.
+Les normes comptables locales de chaque pays devront être respectées. L'ERP permettra la tenue de comptabilités conformes aux exigences locales tout en autorisant la consolidation IFRS. Les évolutions réglementaires seront intégrées dans les mises à jour.
+Les obligations fiscales numériques se multiplient. L'ERP devra supporter : Factur-X français, SII espagnol, SDI italien, SAF-T nordique et polonais, et les futurs dispositifs de e-reporting européens. Une veille réglementaire active est attendue.
+Les réglementations sectorielles retail devront être prises en compte : soldes et promotions, affichage des prix, garanties légales, droit de rétractation, éco-contributions, traçabilité. L'ERP devra offrir la flexibilité nécessaire pour paramétrer ces règles.
+L'auditabilité du système est essentielle. L'ERP devra conserver un historique complet et inaltérable des transactions avec horodatage et identification de l'auteur. Les pistes d'audit seront exportables. Des contrôles automatisés sur les processus sensibles seront paramétrables.
+Synthèse des exigences clés :
+Domaine
+Exigence clé
+Niveau requis
+Performance
+Temps de réponse
+< 2s pour 95% des transactions
+Disponibilité
+Taux de disponibilité
+99,9% (6h-23h)
+Reprise d'activité
+RTO / RPO
+4 heures / 1 heure
+Sécurité
+Certifications
+ISO 27001, SOC 2 Type II
+Multilingue
+Langues supportées
+14 langues
+Volumétrie
+Commandes annuelles
+15,2 M (objectif 30 M en 2030)
+Hébergement
+Localisation
+Union Européenne

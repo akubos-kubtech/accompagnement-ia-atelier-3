@@ -1,0 +1,485 @@
+4. Modalités de la Procédure d'Appel d'Offres
+Cette section définit les modalités pratiques de la consultation lancée par le Groupe Retail Horizon pour la sélection de son futur ERP. Elle précise le calendrier prévisionnel, les règles de communication entre le Groupe et les candidats, les instructions pour la préparation des réponses, ainsi que les critères et le processus d'évaluation qui permettront de sélectionner le partenaire le plus adapté. Le strict respect de ces modalités conditionne la recevabilité des candidatures.
+Le Groupe Retail Horizon attache une importance particulière à la transparence et à l'équité du processus de sélection. Tous les candidats seront traités de manière identique et disposeront des mêmes informations pour élaborer leur proposition. Les règles définies dans cette section sont applicables à l'ensemble des participants et tout manquement pourra entraîner l'exclusion du candidat concerné. Le Groupe se réserve le droit de modifier ces modalités en cours de procédure, sous réserve d'en informer tous les candidats dans les mêmes conditions.
+4.1 Organisation et déroulement de la consultation
+La procédure de consultation se déroule en plusieurs phases successives, chacune ayant des objectifs spécifiques et des livrables attendus. Cette organisation permet une évaluation progressive et approfondie des candidatures, tout en offrant aux candidats des opportunités de démontrer la valeur de leur solution. Le passage d'une phase à l'autre est conditionné par les résultats de l'évaluation de la phase précédente ; tous les candidats ne seront pas nécessairement invités à participer à toutes les phases.
+La consultation est ouverte aux éditeurs de solutions ERP disposant d'une offre mature et éprouvée pour le secteur du retail et du commerce international. Les candidats peuvent répondre seuls s'ils disposent des capacités d'intégration nécessaires, ou en groupement avec un ou plusieurs partenaires intégrateurs. Dans le cas d'un groupement, un mandataire unique sera désigné comme interlocuteur du Groupe pour l'ensemble de la procédure. La composition du groupement ne pourra pas être modifiée après le dépôt de la candidature, sauf accord préalable du Groupe.
+4.1.1 Calendrier prévisionnel détaillé des phases du projet
+Le calendrier ci-dessous présente les principales échéances de la procédure de consultation. Ces dates sont prévisionnelles et pourront être ajustées en fonction du déroulement effectif de la procédure. Toute modification du calendrier sera communiquée à l'ensemble des candidats par voie électronique. Les candidats sont invités à prendre leurs dispositions pour respecter ces échéances, aucun report individuel ne pouvant être accordé.
+Calendrier de la consultation :
+Phase
+Date
+Description
+1
+15 janvier 2026
+Publication de l'appel d'offres et envoi du cahier des charges
+2
+31 janvier 2026
+Date limite de réception des questions des candidats
+3
+14 février 2026
+Diffusion des réponses aux questions (document consolidé)
+4
+15 mars 2026 - 18h00
+Date limite de remise des offres (phase écrite)
+5
+16-31 mars 2026
+Analyse des offres écrites par le comité d'évaluation
+6
+4 avril 2026
+Communication de la short-list (3-4 candidats retenus)
+7
+7-11 avril 2026
+Transmission des scénarios pour les démonstrations (PoC)
+8
+14 avril - 9 mai 2026
+Préparation des démonstrations par les candidats (4 semaines)
+9
+11-22 mai 2026
+Sessions de démonstration (2 jours par candidat)
+10
+25-29 mai 2026
+Soutenances finales et présentation des équipes projet
+11
+1-5 juin 2026
+Négociations commerciales avec les 2 finalistes
+12
+12 juin 2026
+Décision finale et notification au lauréat
+13
+Juin-Juillet 2026
+Finalisation et signature du contrat
+14
+Septembre 2026
+Lancement du projet (kick-off)
+La phase de démonstration (PoC - Proof of Concept) est une étape clé de la sélection, permettant aux candidats présélectionnés de démontrer concrètement les capacités de leur solution sur des scénarios métiers représentatifs du Groupe. Cette phase sera précédée de la signature d'un accord de confidentialité renforcé (NDA) par les candidats, compte tenu des informations détaillées qui seront partagées. Les candidats disposeront de quatre semaines pour préparer leur démonstration, avec possibilité de poser des questions de clarification sur les scénarios transmis.
+Les soutenances finales permettront aux candidats de présenter leur compréhension du projet, leur approche de mise en œuvre, leur équipe dédiée et leurs engagements. Elles seront suivies d'une session de questions-réponses avec le comité de sélection. Les négociations commerciales finales seront menées avec les deux candidats les mieux classés à l'issue des soutenances, afin de finaliser les conditions contractuelles et tarifaires avant la décision finale.
+4.1.2 Procédure de questions/réponses et de clarification
+Les candidats sont invités à poser toutes les questions nécessaires à la bonne compréhension du cahier des charges et à l'élaboration de leur réponse. Les questions permettent de clarifier les zones d'ombre, de préciser certaines exigences et d'assurer une compréhension uniforme des attentes du Groupe par tous les candidats. Le Groupe s'engage à répondre de manière complète et équitable à toutes les questions pertinentes reçues dans les délais impartis.
+Les questions devront être transmises exclusivement par voie électronique, à l'adresse ao-erp@retail-horizon.com, avant la date limite indiquée dans le calendrier (31 janvier 2026). Les questions reçues après cette date ne seront pas traitées, sauf circonstance exceptionnelle appréciée par le Groupe. Chaque question devra être formulée de manière claire et précise, en référençant la section du cahier des charges concernée. Les questions multiples seront regroupées dans un seul envoi, numérotées pour faciliter le traitement.
+Dans un souci d'équité entre les candidats, les réponses aux questions seront consolidées dans un document unique qui sera diffusé simultanément à tous les candidats ayant manifesté leur intérêt pour la consultation. Ce document de questions-réponses constituera un complément officiel au cahier des charges et aura la même valeur contractuelle. Les questions et réponses seront anonymisées pour préserver la confidentialité des interrogations de chaque candidat.
+Si une question porte sur des informations confidentielles propres à un candidat (référence à sa solution spécifique, conditions commerciales envisagées), le Groupe se réserve le droit de répondre de manière individuelle sans diffusion aux autres candidats. Dans tous les cas, le Groupe veillera à ce qu'aucun candidat ne dispose d'un avantage informationnel sur les autres. Les candidats sont tenus de ne pas communiquer entre eux sur le contenu de la consultation et de leurs réponses respectives.
+Au-delà des échanges écrits, le Groupe pourra organiser une réunion d'information collective (webinaire) destinée à présenter le contexte du projet, les principaux enjeux et les attentes du Groupe. Cette réunion, si elle est organisée, sera annoncée à tous les candidats avec un préavis suffisant. La participation à cette réunion est facultative et n'est pas un prérequis pour la soumission d'une offre. Un compte-rendu de la réunion sera diffusé à tous les candidats, y compris ceux n'ayant pas participé.
+4.1.3 Conditions des démonstrations (PoC - Proof of Concept) et des soutenances
+La phase de démonstration constitue une étape déterminante de la sélection, permettant d'évaluer concrètement l'adéquation de chaque solution aux besoins du Groupe au-delà des déclarations écrites. Seuls les candidats présélectionnés à l'issue de l'analyse des offres écrites (short-list de 3 à 4 candidats) seront invités à participer à cette phase. L'invitation à démontrer ne préjuge pas de la sélection finale et n'engage le Groupe à aucune forme de compensation pour les candidats non retenus.
+Les démonstrations se dérouleront dans les locaux du Groupe Retail Horizon à Paris, sur une durée de deux jours consécutifs par candidat. L'ordre de passage sera déterminé par tirage au sort. Les sessions seront organisées de 9h00 à 18h00 avec une pause déjeuner d'une heure. Le Groupe mettra à disposition une salle équipée (vidéoprojecteur, connexion Internet, tableau blanc). Les candidats pourront utiliser leur propre matériel de démonstration (ordinateurs, équipements spécifiques) sous réserve d'autonomie technique.
+Les scénarios de démonstration seront communiqués aux candidats présélectionnés au moins quatre semaines avant les sessions. Ces scénarios couvriront les processus métiers les plus critiques et les plus différenciants pour le Groupe : parcours de vente omnicanal complet (commande web avec retrait magasin, retour en magasin d'un achat web), cycle d'approvisionnement international (commande fournisseur, réception avec contrôle, gestion des droits de douane), processus de clôture financière multi-pays, gestion des promotions complexes avec cumul de remises.
+Les candidats prépareront leur démonstration sur leur propre environnement, paramétré avec un jeu de données représentatif du contexte Retail Horizon (catalogue produits simplifié, structure organisationnelle, conditions tarifaires). Le Groupe pourra fournir un fichier de données de référence à charger dans l'environnement de démonstration. La démonstration devra être réalisée sur une version commercialement disponible de la solution, et non sur une version prototype ou en développement. Les fonctionnalités présentées comme disponibles devront pouvoir être livrées dans le cadre du projet.
+L'équipe de démonstration du candidat sera composée au maximum de cinq personnes : un responsable de la démonstration (chef de projet ou directeur commercial), un ou deux consultants fonctionnels réalisant les manipulations, un architecte technique pour les questions d'architecture et d'intégration, et éventuellement un expert métier retail. L'équipe du Groupe sera composée de représentants des directions métiers concernées (commerce, supply chain, finance, IT) et des consultants Deloitte Digital assistant le Groupe dans la sélection.
+Grille d'évaluation des démonstrations :
+Critère d'évaluation
+Pondération
+Éléments observés
+Couverture fonctionnelle native
+30%
+Scénarios réalisés sans développement
+Ergonomie et expérience utilisateur
+25%
+Fluidité, intuitivité, modernité
+Capacités de paramétrage et flexibilité
+20%
+Adaptabilité sans code
+Performance et réactivité
+15%
+Temps de réponse observés
+Qualité de la présentation et maîtrise
+10%
+Clarté, réponses aux questions
+Les soutenances finales se tiendront la semaine suivant les démonstrations. D'une durée de trois heures par candidat, elles permettront de présenter la vision du partenariat, l'approche projet proposée, l'équipe dédiée avec les CV des intervenants clés, les références clients comparables et les engagements de résultats. Une partie de la soutenance sera consacrée aux questions du comité de sélection sur tous les aspects de l'offre (fonctionnel, technique, projet, commercial). La soutenance se conclura par une présentation des conditions commerciales finales.
+
+4.2 Instructions pour la préparation et la soumission des propositions
+Cette section détaille les instructions que les candidats devront respecter scrupuleusement pour la préparation et la soumission de leur proposition. Le respect de ces instructions conditionne la recevabilité des offres. Les candidats sont invités à lire attentivement ces consignes et à s'y conformer strictement. Le Groupe se réserve le droit d'écarter toute offre ne respectant pas les exigences de forme définies ci-après.
+4.2.1 Structure impérative du mémoire de réponse (technique et commercial)
+La proposition des candidats sera structurée en deux volets distincts : un mémoire technique présentant la solution et l'approche projet, et une proposition commerciale détaillant les conditions financières. Cette séparation permet une évaluation indépendante de la qualité technique et du positionnement tarifaire, conformément aux bonnes pratiques des procédures d'achat. Chaque volet fera l'objet d'un document séparé, clairement identifié.
+Le mémoire technique devra impérativement respecter la structure suivante :
+Section 1 - Présentation du candidat (20 pages maximum) : présentation de la société (historique, actionnariat, chiffres clés financiers des trois dernières années), positionnement sur le marché ERP retail, organisation et implantation géographique, politique d'innovation et de R&D, certifications et partenariats, références clients significatives dans le secteur du retail (minimum 5 références détaillées avec contacts autorisés). En cas de groupement, présentation de chaque membre et justification de la complémentarité.
+Section 2 - Présentation de la solution (40 pages maximum) : description générale de la solution et de son positionnement, architecture fonctionnelle et couverture des domaines métiers, architecture technique et modèle de déploiement, roadmap produit et évolutions prévues sur 3 ans, politique de versioning et de support des versions, capacités d'intégration et catalogue d'API, capacités de paramétrage et d'extension, technologies sous-jacentes et stack technique.
+Section 3 - Réponse aux exigences fonctionnelles (volume selon annexe) : réponse détaillée à chaque exigence du cahier des charges selon le format de l'Annexe A (fichier Excel à compléter). Pour chaque exigence, le candidat indiquera le niveau de couverture (standard, paramétrage, développement spécifique, non couvert) et fournira un commentaire explicatif. Les écarts par rapport aux exigences seront clairement identifiés avec les solutions alternatives proposées.
+Section 4 - Réponse aux exigences non-fonctionnelles et techniques (30 pages maximum) : engagements de performance et de disponibilité, architecture de déploiement proposée pour Retail Horizon, stratégie d'intégration avec l'écosystème existant (détail des connecteurs et des interfaces), approche de migration des données, dispositif de sécurité et conformité, réponse à la matrice de conformité sécurité et RGPD (Annexe C).
+Section 5 - Approche projet et méthodologie (30 pages maximum) : méthodologie de mise en œuvre proposée, macro-planning du projet avec identification des phases et des jalons, organisation projet proposée (gouvernance, instances, rôles et responsabilités), gestion des risques et dispositif de pilotage qualité, approche de conduite du changement et de formation, stratégie de déploiement (big bang vs progressif, pilote), dispositif de support post-démarrage et de maintenance.
+Section 6 - Équipe projet proposée (20 pages maximum) : organigramme de l'équipe proposée avec les rôles de chacun, CV détaillés des intervenants clés (directeur de projet, architecte, consultants seniors), expérience de l'équipe sur des projets comparables, engagement de stabilité de l'équipe et modalités de remplacement, localisation de l'équipe et modalités d'intervention (sur site, à distance).
+La proposition commerciale devra impérativement respecter la structure suivante :
+Section A - Synthèse financière : montant total de l'offre avec ventilation par grande nature de coûts (licences/abonnements, intégration, formation, maintenance), récapitulatif du TCO sur 5 ans, conditions de validité de l'offre.
+Section B - Détail des coûts de licences ou d'abonnements : modèle de tarification (par utilisateur, par transaction, forfait), détail par module ou composant, conditions de croissance (tarification des utilisateurs additionnels, paliers), remises accordées et conditions d'application.
+Section C - Détail des coûts de mise en œuvre : décomposition par phase projet et par lot, taux journaliers par profil d'intervenant, nombre de jours estimé par profil et par phase, hypothèses et exclusions, conditions de révision des estimations.
+Section D - Détail des coûts récurrents : maintenance corrective et évolutive, support utilisateurs (niveaux, horaires, canaux), hébergement et infrastructure (si applicable), évolutions réglementaires, conditions de révision annuelle.
+Section E - Conditions contractuelles : acceptation ou réserves sur les clauses du projet de contrat (Annexe au cahier des charges), engagements de niveaux de service (SLA) proposés, garanties et pénalités acceptées, conditions de réversibilité.
+4.2.2 Date et heure limites de remise des offres
+La date limite de remise des offres est fixée au dimanche 15 mars 2026 à 18h00, heure de Paris.
+Cette date limite est impérative et ne pourra faire l'objet d'aucun report individuel. Seules les offres réceptionnées avant cette échéance seront prises en considération. L'horodatage de la plateforme de dépôt fera foi en cas de contestation. Les candidats sont invités à ne pas attendre les dernières heures pour soumettre leur offre, afin de se prémunir contre tout incident technique. Le Groupe décline toute responsabilité en cas d'impossibilité de dépôt liée à une surcharge de la plateforme ou à un problème technique chez le candidat.
+Toute offre reçue après la date et l'heure limites sera automatiquement rejetée sans être ouverte ni analysée, quelle que soit la cause du retard (problème technique, erreur de transmission, cas de force majeure). Le candidat concerné sera informé du rejet de son offre pour cause de tardiveté. Le Groupe se réserve toutefois la possibilité, à sa seule discrétion et de manière exceptionnelle, de proroger le délai de remise des offres pour l'ensemble des candidats si les circonstances le justifient.
+4.2.3 Format de soumission (plateforme, documents attendus)
+Les offres devront être déposées exclusivement via la plateforme de sourcing du Groupe, accessible à l'adresse https://sourcing.retail-horizon.com. Les candidats recevront leurs identifiants de connexion lors de la manifestation de leur intérêt pour la consultation. En cas de difficulté d'accès à la plateforme, les candidats contacteront le support technique à l'adresse support-sourcing@retail-horizon.com. Aucune offre transmise par un autre canal (email, courrier postal, remise en main propre) ne sera acceptée.
+Les documents devront être fournis dans les formats suivants : documents texte au format PDF (mémoire technique, proposition commerciale), fichiers de réponse aux annexes au format Excel (Annexe A : exigences fonctionnelles, Annexe D : proposition financière), présentations éventuelles au format PowerPoint, schémas d'architecture au format PDF ou image haute résolution. Les fichiers devront être nommés selon la convention suivante : [NomCandidat]_[TypeDocument]_[Version].extension (exemple : AcmeERP_MemoireTechnique_V1.pdf).
+La taille maximale de chaque fichier est limitée à 50 Mo. La taille totale de l'ensemble des fichiers ne devra pas excéder 200 Mo. Les fichiers compressés (ZIP) sont acceptés pour regrouper les documents d'une même catégorie. Les fichiers ne devront pas être protégés par mot de passe ni contenir de macro active. Les liens vers des ressources externes (sites web, espaces de partage) ne seront pas pris en compte ; tous les éléments de la réponse devront être contenus dans les fichiers déposés.
+Documents attendus pour une offre complète :
+Document
+Format
+Caractère
+Mémoire technique (sections 1 à 6)
+PDF
+Obligatoire
+Proposition commerciale (sections A à E)
+PDF
+Obligatoire
+Annexe A - Réponse aux exigences fonctionnelles
+Excel (.xlsx)
+Obligatoire
+Annexe C - Matrice de conformité sécurité/RGPD
+Excel (.xlsx)
+Obligatoire
+Annexe D - Détail de la proposition financière
+Excel (.xlsx)
+Obligatoire
+CV des intervenants clés
+PDF
+Obligatoire
+Schémas d'architecture technique
+PDF / PNG
+Obligatoire
+Rapports financiers (3 derniers exercices)
+PDF
+Obligatoire
+Certifications et attestations
+PDF
+Recommandé
+Documentation technique complémentaire
+PDF
+Facultatif
+
+4.3 Processus d'évaluation et critères de sélection
+Le processus d'évaluation des offres est conçu pour garantir une sélection objective, équitable et alignée sur les intérêts stratégiques du Groupe Retail Horizon. L'évaluation portera sur l'ensemble des dimensions de l'offre : qualité fonctionnelle et technique de la solution, solidité et pérennité du candidat, pertinence de l'approche projet et compétence de l'équipe, ainsi que conditions financières. La méthodologie d'évaluation est détaillée dans cette section pour permettre aux candidats de comprendre les attentes et d'orienter leur réponse en conséquence.
+4.3.1 Critères d'éligibilité et de conformité des offres
+Avant toute analyse du contenu des offres, le Groupe vérifiera la recevabilité de chaque candidature au regard des critères d'éligibilité définis ci-après. Les candidatures ne satisfaisant pas à ces critères seront écartées sans analyse de leur contenu. Les critères d'éligibilité sont des conditions minimales incontournables que tout candidat doit remplir pour être considéré. Ils ne font pas l'objet d'une notation mais d'une vérification binaire (conforme / non conforme).
+Critères d'éligibilité relatifs au candidat :
+Le candidat (éditeur ou mandataire du groupement) doit justifier d'une existence légale d'au moins cinq ans et d'une situation financière saine, attestée par les comptes des trois derniers exercices ne révélant pas de pertes récurrentes susceptibles de compromettre la pérennité de l'entreprise. Le candidat doit disposer d'un chiffre d'affaires annuel supérieur à 50 millions d'euros sur le périmètre de l'activité ERP. Le candidat ne doit pas être en situation de redressement judiciaire, de liquidation ou faire l'objet de sanctions économiques internationales.
+Critères d'éligibilité relatifs à la solution :
+La solution proposée doit être une solution ERP intégrée du marché (progiciel), commercialement disponible et déployée en production chez au moins 50 clients. Les solutions développées spécifiquement pour ce projet ou les assemblages de composants hétérogènes ne sont pas acceptés. La solution doit couvrir nativement les domaines fonctionnels suivants : gestion commerciale, achats, stocks, comptabilité et finance. La solution doit être disponible en mode SaaS ou Cloud et disposer des certifications de sécurité ISO 27001 et SOC 2.
+Critères d'éligibilité relatifs à l'expérience :
+Le candidat doit démontrer une expérience significative dans le secteur du retail, attestée par au moins trois références de projets ERP réalisés avec succès dans ce secteur au cours des cinq dernières années. Au moins une référence doit concerner un groupe international opérant dans plusieurs pays européens. Le candidat doit disposer d'une équipe d'au moins 20 consultants expérimentés sur la solution proposée, dont au moins 5 spécialisés dans le secteur retail.
+Critères de conformité de l'offre :
+L'offre doit être complète et comprendre l'ensemble des documents obligatoires listés dans la section 4.2.3. L'offre doit respecter les formats et la structure imposés. L'offre doit être rédigée en français ou en anglais. L'offre doit avoir été déposée dans les délais impartis. L'offre doit comporter un engagement de validité d'au moins 6 mois à compter de la date de dépôt. Toute offre incomplète, hors délai ou non conforme aux exigences de forme pourra être écartée.
+4.3.2 Grille d'évaluation détaillée et pondération (Qualité/Prix/Partenariat)
+L'évaluation des offres recevables s'appuiera sur une grille multicritères permettant d'apprécier chaque proposition selon trois dimensions principales : la qualité de la solution et de l'approche (60% de la note globale), les conditions financières (25% de la note globale), et la qualité du partenariat proposé (15% de la note globale). Cette pondération reflète la priorité accordée par le Groupe à la qualité et à l'adéquation de la solution, tout en intégrant une dimension économique significative et une attention particulière à la relation partenariale.
+Grille d'évaluation globale :
+Critère d'évaluation
+Poids
+Sous-critères
+1. QUALITÉ DE LA SOLUTION
+40%
+
+1.1 Couverture fonctionnelle
+20%
+Réponse aux exigences, niveau de standard
+1.2 Architecture technique
+10%
+Modernité, ouverture, scalabilité
+1.3 Ergonomie et UX
+5%
+Interface, personnalisation
+1.4 Capacités d'intégration
+5%
+API, connecteurs, interopérabilité
+2. QUALITÉ DE L'APPROCHE PROJET
+20%
+
+2.1 Méthodologie et planning
+8%
+Réalisme, maîtrise des risques
+2.2 Équipe et compétences
+7%
+Expérience, disponibilité, stabilité
+2.3 Conduite du changement
+5%
+Formation, accompagnement
+3. CONDITIONS FINANCIÈRES
+25%
+
+3.1 Coût total de possession (TCO 5 ans)
+15%
+Compétitivité globale
+3.2 Modèle économique
+5%
+Transparence, prévisibilité
+3.3 Conditions contractuelles
+5%
+SLA, garanties, pénalités
+4. QUALITÉ DU PARTENARIAT
+15%
+
+4.1 Solidité et pérennité du candidat
+5%
+Santé financière, vision stratégique
+4.2 Références et expérience retail
+5%
+Clients comparables, succès démontrés
+4.3 Engagement et qualité relationnelle
+5%
+Réactivité, écoute, transparence
+TOTAL
+100%
+
+Chaque critère sera noté sur une échelle de 0 à 5, selon le barème suivant : 0 = non traité ou totalement inadapté, 1 = très insuffisant / répond marginalement aux attentes, 2 = insuffisant / répond partiellement aux attentes, 3 = acceptable / répond aux attentes de base, 4 = bon / répond bien aux attentes avec des points forts, 5 = excellent / dépasse les attentes avec des éléments différenciants. La note globale de chaque offre sera calculée par somme pondérée des notes obtenues sur chaque critère.
+4.3.3 Composition du comité de sélection
+Le comité de sélection est l'instance décisionnelle responsable de l'évaluation des offres et de la recommandation du lauréat. Sa composition pluridisciplinaire garantit une analyse équilibrée intégrant les perspectives des différentes parties prenantes du projet. Le comité est présidé par le Directeur des Systèmes d'Information du Groupe, sponsor exécutif du projet. Ses décisions sont prises collégialement, après débat et sur la base des analyses documentées.
+Composition du comité de sélection :
+Le comité comprend des représentants de la Direction des Systèmes d'Information (DSI) : le Directeur des Systèmes d'Information (président du comité), le Directeur de Programme ERP (rapporteur), l'Architecte d'Entreprise et le Responsable Sécurité SI (RSSI). Il comprend également des représentants des directions métiers : le Directeur Supply Chain ou son représentant, le Directeur Commercial ou son représentant, le Directeur Administratif et Financier ou son représentant, et le Directeur des Ressources Humaines ou son représentant pour les aspects conduite du changement.
+Le comité de sélection est assisté dans ses travaux par les consultants du cabinet Deloitte Digital, mandaté par le Groupe pour l'accompagnement de cette consultation. Les consultants apportent leur expertise méthodologique, leur connaissance du marché des ERP et leur expérience de projets similaires. Ils participent à l'analyse des offres et à la préparation des supports de décision, mais ne disposent pas de voix délibérative. Leur rôle est consultatif et vise à éclairer les décisions du comité.
+Le comité de sélection se réunira à plusieurs reprises au cours de la procédure : une réunion de cadrage au lancement de la consultation pour valider la grille d'évaluation et les règles de fonctionnement, une réunion d'analyse des offres écrites pour établir la short-list des candidats invités aux démonstrations, une réunion de débriefing après chaque session de démonstration pour partager les observations, une réunion de délibération finale pour arrêter le classement des candidats et formuler la recommandation au Comité de Direction. Les comptes-rendus des réunions seront archivés pour assurer la traçabilité des décisions.
+Les membres du comité de sélection s'engagent à respecter les principes d'éthique et de déontologie applicables aux procédures d'achat : confidentialité des informations relatives aux offres et aux délibérations, impartialité dans l'analyse et l'évaluation, déclaration et gestion de tout conflit d'intérêts potentiel, non-sollicitation de cadeaux ou avantages de la part des candidats. Tout manquement à ces principes pourrait entraîner l'exclusion du membre concerné et, dans les cas les plus graves, l'annulation de la procédure.
+La décision finale de sélection sera prise par le Comité de Direction du Groupe Retail Horizon, sur proposition du comité de sélection. Le Comité de Direction validera le choix du lauréat et autorisera l'engagement des négociations contractuelles. Cette validation au plus haut niveau de l'organisation témoigne de l'importance stratégique du projet et garantit l'alignement de la décision avec les orientations du Groupe. Les candidats non retenus seront informés par écrit de la décision et pourront, sur demande, obtenir un débriefing sur les raisons de la non-sélection de leur offre.
+5. Aspects Contractuels et Livrables Attendus
+Cette section définit le cadre contractuel qui régira la relation entre le Groupe Retail Horizon et le prestataire retenu, ainsi que les livrables attendus tout au long du projet et en phase d'exploitation. Les candidats sont invités à prendre connaissance attentivement de ces éléments, qui constituent des engagements fondamentaux du futur partenariat. Toute réserve ou contre-proposition sur ces aspects devra être clairement exprimée dans la réponse à l'appel d'offres.
+Le cadre contractuel proposé vise à établir une relation équilibrée entre les parties, protégeant les intérêts légitimes de chacun tout en favorisant un partenariat constructif orienté vers la réussite du projet. Le Groupe Retail Horizon privilégie une approche collaborative avec ses prestataires stratégiques, fondée sur la transparence, la confiance mutuelle et l'engagement commun vers des objectifs partagés. Cette philosophie n'exclut pas la mise en place de mécanismes de protection et de garanties contractuelles appropriés.
+5.1 Cadre contractuel proposé
+Le dispositif contractuel envisagé pour ce projet comprendra plusieurs accords complémentaires, couvrant les différentes dimensions de la relation : fourniture de la solution logicielle, services de mise en œuvre, maintenance et support, hébergement le cas échéant. Cette structuration permet de clarifier les responsabilités respectives et de traiter de manière appropriée les spécificités de chaque type de prestation. L'ensemble formera un corpus contractuel cohérent, avec des clauses transverses garantissant l'unicité de la relation.
+5.1.1 Structure contractuelle envisagée (contrat-cadre, bons de commande)
+La structure contractuelle proposée s'articule autour d'un contrat-cadre définissant les conditions générales de la relation, complété par des contrats d'application ou bons de commande pour chaque prestation spécifique. Cette architecture offre la flexibilité nécessaire pour adapter les engagements aux différentes phases du projet tout en maintenant un cadre stable et sécurisé pour les deux parties. Le contrat-cadre aura une durée initiale de cinq ans, renouvelable par périodes successives de deux ans.
+Architecture contractuelle proposée :
+Document contractuel
+Objet
+Durée / Renouvellement
+Contrat-cadre
+Conditions générales, gouvernance, clauses transverses (confidentialité, PI, responsabilité)
+5 ans initial, renouvelable par période de 2 ans
+Contrat de licence / SaaS
+Droit d'usage de la solution, périmètre fonctionnel, métriques, conditions tarifaires
+Aligné sur le contrat-cadre
+Contrat de services (intégration)
+Prestations de mise en œuvre, paramétrage, développements spécifiques, migration, formation
+Durée du projet (estimée 24-30 mois)
+Contrat de maintenance
+Support utilisateurs, maintenance corrective et évolutive, SLA
+Annuel, tacite reconduction
+Contrat d'hébergement
+Infrastructure, disponibilité, PRA/PCA, sécurité (si applicable selon modèle)
+Aligné sur le contrat-cadre
+Bons de commande
+Prestations complémentaires ponctuelles (évolutions, projets connexes, expertises)
+Au cas par cas
+Le contrat-cadre constituera le document fondateur de la relation, établissant les principes directeurs applicables à l'ensemble des prestations. Il définira notamment : l'objet global du partenariat et son périmètre, les obligations générales des parties, les règles de gouvernance et les instances de pilotage, les clauses de confidentialité et de protection des données, le régime de propriété intellectuelle, les conditions de responsabilité et d'assurance, les modalités de règlement des litiges et le droit applicable.
+Le contrat de licence ou d'abonnement SaaS définira les conditions d'utilisation de la solution logicielle. Dans le cas d'un modèle SaaS, il précisera les modalités d'accès au service, les niveaux de service garantis (disponibilité, performance, support), les conditions tarifaires et leur évolution, ainsi que les droits et obligations spécifiques à ce mode de fourniture. Ce contrat intégrera les conditions générales de l'éditeur, sous réserve des adaptations négociées pour tenir compte des exigences du Groupe.
+Le contrat de services d'intégration encadrera les prestations de mise en œuvre du projet. Il définira le périmètre précis des travaux, le planning et les jalons contractuels, les livrables attendus et leurs critères d'acceptation, les ressources mobilisées et les engagements de moyens ou de résultats, les conditions de rémunération et le calendrier de paiement. Ce contrat sera structuré en phases avec des points de validation permettant de sécuriser l'avancement du projet et de conditionner les paiements à l'atteinte des objectifs définis.
+Le contrat de maintenance définira les conditions du support et de l'évolution de la solution après la mise en production. Il précisera les différents niveaux de support (N1, N2, N3), les horaires de couverture, les canaux de contact, les délais de prise en charge et de résolution selon la criticité des incidents, ainsi que les conditions de la maintenance évolutive (mises à jour, nouvelles versions). Les pénalités applicables en cas de non-respect des engagements de service seront définies dans ce contrat.
+5.1.2 Clauses essentielles (confidentialité, propriété intellectuelle, réversibilité)
+Certaines clauses revêtent une importance particulière pour le Groupe Retail Horizon et feront l'objet d'une attention soutenue lors de la négociation contractuelle. Ces clauses essentielles visent à protéger les intérêts stratégiques du Groupe, à sécuriser ses actifs immatériels et à garantir sa capacité à maîtriser son système d'information dans la durée. Les candidats sont invités à prendre connaissance de ces exigences et à indiquer dans leur réponse leur position sur chacune d'entre elles.
+Clause de confidentialité :
+Le prestataire s'engagera à maintenir la plus stricte confidentialité sur l'ensemble des informations relatives au Groupe auxquelles il aura accès dans le cadre du projet : données métiers, processus opérationnels, stratégie commerciale, informations financières, architecture du système d'information. Cette obligation de confidentialité s'appliquera pendant toute la durée du contrat et se prolongera pendant une période de cinq ans après son terme. Elle sera opposable au prestataire, à ses sous-traitants et à l'ensemble de son personnel intervenant sur le projet. Des mesures de sécurité spécifiques pourront être exigées pour les données les plus sensibles.
+Clause de propriété intellectuelle :
+Le régime de propriété intellectuelle devra être clairement défini pour éviter toute ambiguïté. L'éditeur conservera la propriété de sa solution standard et de ses évolutions génériques. En revanche, les développements spécifiques réalisés pour les besoins propres du Groupe, financés par celui-ci, lui seront cédés en pleine propriété ou feront l'objet d'une licence perpétuelle, irrévocable et cessible. Les paramétrages, configurations et données appartiennent au Groupe. Les outils, méthodes et savoir-faire génériques de l'intégrateur restent sa propriété, mais les livrables documentaires produits pour le projet sont la propriété du Groupe.
+Clause de réversibilité :
+La réversibilité est une exigence fondamentale garantissant la capacité du Groupe à reprendre le contrôle de ses données et à changer de solution si nécessaire. Le prestataire s'engagera à fournir, à première demande et à tout moment, l'ensemble des données du Groupe dans un format standard, ouvert et exploitable (CSV, XML, JSON ou format équivalent). Un plan de réversibilité sera établi dès le démarrage du contrat, précisant les opérations à réaliser, les formats de données, les délais et les coûts associés. En fin de contrat, quelle qu'en soit la cause, le prestataire assistera le Groupe dans la migration vers une nouvelle solution pendant une période de transition d'au moins six mois.
+Clause d'audit :
+Le Groupe se réservera le droit de faire réaliser des audits du prestataire et de la solution, par ses équipes internes ou par un tiers mandaté. Ces audits pourront porter sur le respect des engagements contractuels, la sécurité des systèmes et des données, la conformité aux réglementations applicables, et la facturation des prestations. Le prestataire s'engagera à faciliter ces audits en donnant accès aux informations et aux locaux nécessaires, dans le respect de ses propres contraintes de confidentialité vis-à-vis de ses autres clients. Un audit annuel sera prévu contractuellement, des audits complémentaires pouvant être déclenchés en cas de besoin justifié.
+Clause de sous-traitance :
+Le recours à la sous-traitance sera encadré par des règles strictes. Le prestataire principal restera seul responsable vis-à-vis du Groupe de l'exécution de l'ensemble des prestations, y compris celles confiées à des sous-traitants. Tout recours à un sous-traitant pour des prestations significatives devra faire l'objet d'une information préalable et d'une approbation du Groupe. Les sous-traitants devront présenter des garanties équivalentes à celles du prestataire principal en termes de compétences, de sécurité et de confidentialité. La liste des sous-traitants autorisés sera annexée au contrat et mise à jour régulièrement.
+Clause de continuité de service :
+Le prestataire garantira la continuité du service en toutes circonstances. En cas de défaillance du prestataire (redressement ou liquidation judiciaire, cessation d'activité sur la solution), des mécanismes de protection seront prévus : accès aux codes sources via un séquestre (escrow), engagement de reprise par un tiers agréé, maintien des services essentiels pendant une période de transition. Le prestataire devra justifier d'une assurance responsabilité civile professionnelle avec des plafonds de garantie adaptés aux enjeux du projet (minimum 10 millions d'euros par sinistre).
+5.1.3 Engagements de niveaux de service (SLA) et pénalités
+Les engagements de niveaux de service (Service Level Agreements - SLA) constituent le socle de la relation opérationnelle entre le Groupe et le prestataire en phase d'exploitation. Ces engagements quantifiés et mesurables définissent les objectifs de qualité attendus et les conséquences en cas de non-atteinte. Ils couvrent les dimensions clés de la qualité de service : disponibilité, performance, support. Les candidats proposeront leurs engagements sur chacun de ces indicateurs, en cohérence avec les exigences exprimées dans le cahier des charges.
+Engagements de niveaux de service (SLA) attendus :
+Indicateur
+Objectif
+Mesure
+Pénalité
+DISPONIBILITÉ
+Disponibilité heures ouvrées (6h-23h)
+99,9%
+Mensuelle
+5% redevance / 0,1% manquant
+Disponibilité périodes critiques
+99,95%
+Par période
+10% redevance / 0,1% manquant
+PERFORMANCE
+Temps de réponse transactions courantes
+< 2s (95%)
+Mensuelle
+2% redevance / 5% manquant
+Temps de réponse transactions complexes
+< 5s (95%)
+Mensuelle
+2% redevance / 5% manquant
+SUPPORT ET INCIDENTS
+Prise en charge incident P1 (bloquant)
+< 15 min
+Par incident
+500€ / 15 min de retard
+Résolution incident P1
+< 4h
+Par incident
+1 000€ / heure de retard
+Prise en charge incident P2 (majeur)
+< 1h
+Par incident
+200€ / heure de retard
+Résolution incident P2
+< 8h
+Par incident
+500€ / 4h de retard
+Prise en charge incident P3 (mineur)
+< 4h
+Par incident
+Sans pénalité
+Résolution incident P3
+< 5 jours ouvrés
+Par incident
+Sans pénalité
+Les pénalités ont pour objectif d'inciter le prestataire au respect de ses engagements et de compenser partiellement le préjudice subi par le Groupe en cas de défaillance. Elles ne constituent pas une limitation de responsabilité : le Groupe se réserve le droit de demander réparation de l'intégralité du préjudice subi si celui-ci excède le montant des pénalités. Le plafond global des pénalités sera fixé à 15% du montant annuel du contrat. Au-delà de ce seuil, le Groupe pourra engager une procédure de résiliation pour faute.
+Les indicateurs de performance seront mesurés par des outils de monitoring indépendants ou par les outils du prestataire sous réserve d'accès aux données brutes par le Groupe. Un reporting mensuel des indicateurs sera produit par le prestataire et analysé lors des comités de pilotage opérationnels. Les écarts seront documentés avec leurs causes racines et les plans d'action correctifs. L'évolution des indicateurs dans le temps permettra d'apprécier l'amélioration continue de la qualité de service.
+
+5.2 Livrables attendus
+Les livrables constituent les productions tangibles attendues du prestataire tout au long du projet et en phase d'exploitation. Ils matérialisent l'avancement des travaux, permettent le transfert de compétences vers les équipes du Groupe et constituent la base documentaire nécessaire à l'exploitation et à l'évolution ultérieure du système. Cette section définit les principaux livrables attendus, leur contenu et leurs critères de qualité. Le prestataire proposera dans son offre la liste détaillée des livrables qu'il s'engage à produire.
+5.2.1 Livrables projet (études, conception, documentation)
+Les livrables projet sont les documents et productions attendus au cours des différentes phases de mise en œuvre, depuis le cadrage initial jusqu'à la mise en production. Ils suivent une logique de construction progressive, chaque livrable s'appuyant sur les précédents et préparant les suivants. La qualité de ces livrables conditionne la maîtrise du projet et la capacité du Groupe à s'approprier la solution mise en place.
+Livrables attendus par phase projet :
+Phase
+Livrable
+Contenu principal
+Cadrage
+Plan de management de projet
+Organisation, gouvernance, instances, RACI, gestion des risques
+
+Planning détaillé
+WBS, jalons, chemin critique, ressources, dépendances
+
+Stratégie de déploiement
+Vagues, pilote, critères de go, plan de rollout
+
+Plan qualité projet
+Normes, revues, critères qualité, gestion des livrables
+Conception
+Dossier de conception générale
+Architecture fonctionnelle, modèle de données, flux, écarts/fit-gap
+
+Dossiers de conception détaillée
+Spécifications par module, règles de gestion, paramétrages
+
+Dossier d'architecture technique
+Infrastructure, dimensionnement, sécurité, intégrations
+
+Spécifications des interfaces
+Mapping de données, format, protocoles, fréquence, erreurs
+
+Stratégie de migration de données
+Périmètre, mapping, règles de transformation, plan de migration
+Réalisation
+Documentation de paramétrage
+Guide de configuration, valeurs des paramètres, justifications
+
+Dossiers de développement
+Spécifications techniques, code source commenté, tests unitaires
+
+Scripts de migration
+Programmes ETL, règles de transformation, rapports de contrôle
+
+Connecteurs et interfaces
+Code, configuration, documentation technique des flux
+Recette
+Stratégie de tests
+Types de tests, environnements, outils, organisation, critères
+
+Cahiers de tests
+Scénarios de test, cas de test, données de test, résultats attendus
+
+Procès-verbaux de recette
+Résultats des tests, anomalies, corrections, validation métier
+
+Rapport de tests de performance
+Scénarios de charge, résultats, analyse, recommandations
+Déploiement
+Plan de déploiement
+Séquencement, tâches, responsables, go/no-go, rollback
+
+Plan de bascule
+Procédures de migration, cut-over, vérifications post-bascule
+
+Rapport de mise en production
+Compte-rendu de déploiement, incidents, points d'attention
+Chaque livrable fera l'objet d'une validation formelle par le Groupe selon un processus défini dans le plan qualité projet. Les livrables seront soumis en version provisoire, examinés par les parties prenantes concernées, et feront l'objet de remarques et demandes de modifications. Après intégration des corrections, la version définitive sera soumise pour validation finale. La validation sera matérialisée par un procès-verbal signé. Le paiement des prestations associées sera conditionné à la validation des livrables correspondants.
+5.2.2 Livrables de formation et de conduite du changement
+La conduite du changement et la formation des utilisateurs sont des facteurs clés de succès du projet, conditionnant l'adoption de la solution et la réalisation des bénéfices attendus. Le prestataire devra accompagner le Groupe dans cette dimension essentielle, en produisant les supports nécessaires et en animant les actions de formation et d'accompagnement. Une approche de « train the trainer » sera privilégiée pour assurer l'autonomie du Groupe dans la durée.
+Plan de conduite du changement :
+Ce document stratégique définira l'approche globale d'accompagnement des utilisateurs. Il comprendra : l'analyse des impacts du changement sur les différentes populations (matrice d'impact), la cartographie des parties prenantes et leur niveau d'adhésion, la stratégie de communication interne (messages clés, canaux, planning), le dispositif de formation (cibles, modalités, calendrier), et les indicateurs de suivi de l'adoption. Ce plan sera élaboré dès la phase de conception et ajusté tout au long du projet.
+Supports de communication :
+Le prestataire produira les supports de communication interne destinés à informer et mobiliser les collaborateurs : présentations pour les réunions d'information, newsletters projet, vidéos de présentation de la solution, FAQ, témoignages d'utilisateurs pilotes. Ces supports seront adaptés aux différentes cibles (direction, managers, utilisateurs opérationnels) et aux différentes phases du projet (annonce, conception, formation, démarrage, optimisation). Le Groupe validera ces supports avant diffusion.
+Programme de formation :
+Le programme de formation définira de manière détaillée le dispositif de montée en compétences des utilisateurs. Il comprendra : l'identification des profils de formation (par rôle métier et niveau de compétence cible), le contenu pédagogique de chaque module, les modalités de formation (présentiel, e-learning, classes virtuelles, coaching), le calendrier des sessions, et les moyens de validation des acquis. Le programme prévoira la formation des formateurs internes (key users) qui assureront le déploiement à grande échelle.
+Supports de formation :
+Les supports de formation seront produits pour chaque module du programme. Ils comprendront : les supports de présentation pour les formations en salle (PowerPoint), les guides utilisateurs détaillés par processus métier (manuels), les fiches pratiques synthétiques (aide-mémoire), les exercices et cas pratiques sur environnement de formation, les quiz d'évaluation des connaissances. Les supports seront disponibles dans les langues du Groupe concernées par chaque vague de déploiement.
+Modules e-learning :
+Des modules de formation en ligne seront développés pour permettre un apprentissage autonome et flexible, complémentaire aux formations présentielles. Ces modules interactifs couvriront les fonctionnalités de base et les processus standards. Ils intégreront des démonstrations animées, des exercices interactifs et des évaluations. Ils seront déployés sur la plateforme LMS du Groupe et accessibles à tout moment. Leur durée unitaire n'excédera pas 20 minutes pour favoriser l'engagement des apprenants.
+5.2.3 Documentation d'exploitation et de maintenance
+La documentation d'exploitation et de maintenance est essentielle pour assurer le bon fonctionnement du système en production et permettre aux équipes du Groupe d'intervenir de manière autonome sur les opérations courantes. Cette documentation sera maintenue à jour tout au long de la vie du système et constituera le référentiel de connaissances pour les équipes d'exploitation et de support.
+Manuel d'exploitation :
+Ce document décrira l'ensemble des procédures d'exploitation quotidienne du système : démarrage et arrêt des services, supervision et monitoring, traitement des alertes, gestion des traitements batch (ordonnancement, surveillance, reprise sur erreur), gestion des environnements (rafraîchissement, clonage), procédures de sauvegarde et de restauration. Il inclura les contacts d'escalade et les procédures d'astreinte. Ce manuel sera le guide de référence pour les équipes d'exploitation du Groupe.
+Documentation technique de la solution :
+Cette documentation décrira l'architecture technique détaillée de la solution telle que déployée pour le Groupe : composants techniques et leurs interactions, modèle de données complet avec dictionnaire, paramétrages techniques effectués, configurations de sécurité, cartographie des flux et interfaces. Elle permettra aux équipes techniques du Groupe de comprendre le fonctionnement interne du système et d'intervenir en cas de besoin, dans les limites des responsabilités convenues avec le prestataire.
+Procédures de support :
+Ce document définira les procédures de gestion des incidents et des demandes de service : processus de signalement et de qualification des incidents, niveaux de priorité et critères de classification, processus d'escalade, procédures de contournement pour les incidents connus, processus de gestion des changements et des mises en production. Il servira de référence commune entre les équipes du Groupe et celles du prestataire pour assurer une gestion fluide et efficace du support.
+Plan de reprise d'activité (PRA) :
+Ce document critique définira les procédures de restauration du service en cas de sinistre majeur. Il comprendra : les scénarios de sinistre envisagés et leurs impacts, les procédures de basculement vers le site de secours, les procédures de restauration des données, les tests de validation post-reprise, les procédures de retour à la normale. Le PRA sera testé au moins une fois par an dans des conditions réalistes, avec un compte-rendu documentant les résultats et les axes d'amélioration identifiés.
+Base de connaissances :
+Une base de connaissances sera constituée progressivement pour capitaliser sur les résolutions d'incidents et les bonnes pratiques d'utilisation. Elle comprendra : les fiches de résolution des incidents récurrents, les procédures de contournement validées, les FAQ issues des questions des utilisateurs, les trucs et astuces pour une utilisation optimale. Cette base sera accessible aux équipes de support et, pour certains contenus, aux utilisateurs finaux via un portail self-service. Elle sera enrichie en continu tout au long de la vie du système.
+
+5.3 Conditions de recette et de validation
+La recette constitue l'étape formelle de vérification de la conformité des livrables et des réalisations aux exigences définies dans le cahier des charges et précisées lors de la conception. Elle engage la responsabilité du prestataire sur la qualité de ses productions et conditionne l'acceptation par le Groupe et le paiement des prestations correspondantes. Cette section définit le cadre général de la recette, les différents types de validation et les conditions d'acceptation.
+5.3.1 Types de recette (usine, intégration, métier)
+Le processus de validation s'articule autour de plusieurs niveaux de recette complémentaires, chacun ayant des objectifs et des responsabilités spécifiques. Cette approche progressive permet de détecter et corriger les anomalies au plus tôt, limitant les impacts et les coûts de correction. Le passage d'un niveau de recette au suivant est conditionné par l'atteinte des critères de sortie définis.
+Niveaux de recette :
+Type de recette
+Objectif
+Responsabilité
+Environnement
+Recette usine
+Vérifier la conformité technique des développements et paramétrages
+Prestataire (avec témoins Groupe)
+Développement
+Recette d'intégration
+Vérifier le bon fonctionnement des interfaces et des flux de bout en bout
+Prestataire et Groupe (conjointe)
+Intégration
+Recette fonctionnelle (UAT)
+Valider la conformité aux besoins métiers et l'utilisabilité
+Groupe (métiers) avec support prestataire
+Recette
+Recette de performance
+Vérifier le respect des exigences de temps de réponse et de charge
+Prestataire (résultats validés par Groupe)
+Pré-production
+Recette de sécurité
+Vérifier la conformité aux exigences de sécurité
+Prestataire + auditeur externe
+Pré-production
+Pilote
+Valider en conditions réelles sur un périmètre restreint
+Groupe avec support prestataire
+Production
+La recette fonctionnelle (UAT - User Acceptance Testing) constitue l'étape clé de validation métier. Elle sera réalisée par des utilisateurs représentatifs des différentes populations, encadrés par les key users formés. Les scénarios de test couvriront l'ensemble des processus métiers, les cas nominaux et les cas aux limites, les règles de gestion spécifiques. Une attention particulière sera portée à la migration des données et à la cohérence avec l'historique. La recette fonctionnelle est un prérequis au passage en production.
+5.3.2 Critères d'acceptation et procédure de réception
+Les critères d'acceptation définissent les conditions objectives devant être réunies pour prononcer la recette d'un livrable ou d'une phase. Ils permettent de formaliser les attendus et d'éviter les ambiguïtés lors de la validation. Ces critères seront définis de manière détaillée lors de la phase de conception pour chaque composant et chaque phase du projet. Les critères généraux applicables sont les suivants.
+Critères d'acceptation des livrables documentaires :
+Complétude par rapport au plan de documentation défini, conformité au format et à la charte graphique imposés, absence d'erreurs factuelles ou d'incohérences majeures, clarté et compréhensibilité pour le public cible, intégration des remarques formulées lors de la revue provisoire. Un livrable documentaire peut être accepté avec réserves mineures (coquilles, améliorations de forme) qui devront être corrigées dans un délai convenu.
+Critères d'acceptation des développements et paramétrages :
+Conformité aux spécifications fonctionnelles et techniques validées, absence d'anomalies bloquantes (P1) ou majeures (P2), taux d'anomalies mineures (P3) inférieur à un seuil défini (typiquement 5% des cas de test), couverture de test supérieure au seuil défini (typiquement 95% des cas de test exécutés avec succès), documentation technique à jour. Les anomalies résiduelles acceptées seront tracées et planifiées pour correction.
+Critères d'acceptation de la mise en production :
+Recette fonctionnelle prononcée sans anomalie bloquante résiduelle, recette de performance validée (respect des SLA cibles), recette de sécurité validée (absence de vulnérabilité critique), migration des données effectuée et validée (contrôles de cohérence satisfaisants), formation des utilisateurs réalisée (taux de couverture atteint), documentation d'exploitation disponible et validée, environnement de production opérationnel, dispositif de support en place et testé.
+Procédure de réception :
+La réception sera matérialisée par un procès-verbal signé par les représentants habilités des deux parties. Le procès-verbal attestera de la vérification des critères d'acceptation et listera les éventuelles réserves. Trois types de réception sont possibles : réception sans réserve (tous les critères sont satisfaits), réception avec réserves (des anomalies mineures subsistent mais n'empêchent pas l'utilisation, un délai de levée des réserves est fixé), ou refus de réception (des anomalies majeures ou bloquantes subsistent, le prestataire doit corriger avant nouvelle présentation). En cas de désaccord sur la réception, une procédure d'escalade sera déclenchée.
+Récapitulatif des engagements contractuels clés :
+Domaine
+Engagement attendu
+Durée du contrat-cadre
+5 ans initial, renouvelable par périodes de 2 ans
+Disponibilité (SLA)
+99,9% heures ouvrées, 99,95% périodes critiques
+Temps de résolution incident P1
+< 4 heures
+Plafond annuel des pénalités
+15% du montant annuel du contrat
+Confidentialité post-contractuelle
+5 ans après la fin du contrat
+Période de réversibilité
+6 mois minimum d'assistance à la transition
+Assurance RC professionnelle
+Minimum 10 M€ par sinistre

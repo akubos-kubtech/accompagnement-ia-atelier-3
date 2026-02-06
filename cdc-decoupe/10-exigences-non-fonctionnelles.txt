@@ -1,0 +1,154 @@
+3.2 Exigences non-fonctionnelles
+Les exigences non-fonctionnelles définissent les critères de qualité attendus de la solution ERP, au-delà de la couverture fonctionnelle. Ces exigences portent sur la performance, la disponibilité, l'ergonomie et d'autres attributs qui conditionnent l'adoption de l'outil par les utilisateurs et la création de valeur pour le Groupe. Le non-respect de ces exigences pourrait compromettre le succès du projet, même avec une couverture fonctionnelle excellente. Les candidats devront s'engager contractuellement sur ces niveaux de service.
+Ces exigences ont été définies sur la base d'une analyse approfondie des besoins métiers, des retours d'expérience sur le système actuel et des benchmarks sectoriels. Elles reflètent les attentes légitimes d'un groupe international opérant dans le retail omnicanal, où la réactivité et la fiabilité du système d'information sont des facteurs critiques de compétitivité. Chaque exigence est assortie d'indicateurs mesurables qui feront l'objet d'un suivi régulier en exploitation.
+3.2.1 Performance, scalabilité et volumétrie
+Les exigences de performance sont critiques pour un ERP supportant les opérations quotidiennes de milliers d'utilisateurs répartis sur trois continents et quinze fuseaux horaires. Le temps de réponse constitue le premier indicateur de performance perçue par les utilisateurs et impacte directement leur productivité et leur satisfaction. Une dégradation des temps de réponse génère non seulement de la frustration mais également des erreurs de saisie et des contournements préjudiciables à la qualité des données.
+L'objectif de temps de réponse est fixé à moins de 2 secondes pour 95% des transactions courantes, mesurées du clic utilisateur à l'affichage complet du résultat. Cette cible s'applique aux opérations de consultation (fiches article, client, commande), de saisie (création de commande, enregistrement de réception) et de validation (approbation de workflow, clôture de caisse). Les 5% restants, correspondant aux transactions complexes impliquant des calculs ou des volumes de données importants, devront s'exécuter en moins de 5 secondes.
+Les transactions analytiques et de reporting ont des objectifs spécifiques adaptés à leur nature. L'affichage d'un tableau de bord standard devra s'effectuer en moins de 5 secondes. L'exécution d'un état paramétré sur une période d'un mois devra aboutir en moins de 30 secondes. Les exports de données volumineux (plus de 100 000 lignes) pourront être traités en mode asynchrone avec notification de l'utilisateur à l'issue du traitement. Ces temps s'entendent pour des requêtes correctement optimisées, sans requête ad hoc non maîtrisée.
+Ces objectifs de performance s'appliquent en conditions normales d'exploitation mais également en période de charge élevée. Le système devra maintenir ses engagements de performance lors des pics d'activité prévisibles : périodes de soldes (janvier et juillet), Black Friday, fêtes de fin d'année, et opérations promotionnelles majeures. Durant ces périodes, la charge peut être multipliée par trois par rapport à une journée normale, avec des pics horaires concentrés entre 12h et 14h et entre 18h et 21h.
+Volumétries actuelles et cibles :
+Indicateur
+Volume actuel (2025)
+Cible 2030
+Commandes annuelles
+15,2 millions
+30 millions
+Lignes de commande annuelles
+52 millions
+100 millions
+Commandes par jour (pic)
+150 000
+300 000
+Références produits actives
+218 000
+400 000
+Fiches clients
+8,5 millions
+15 millions
+Utilisateurs nommés
+4 500
+8 000
+Utilisateurs concurrents (pic)
+2 500
+5 000
+Points de vente
+347
+600
+Pays d'opération
+15
+25
+La scalabilité de la solution doit permettre d'accompagner la croissance du Groupe sans remise en cause de l'architecture ni dégradation des performances. L'objectif stratégique à horizon 2030 prévoit un doublement des volumes traités, porté par l'expansion géographique et la croissance organique. La solution devra démontrer sa capacité à monter en charge de manière linéaire et prévisible, sans effet de seuil ni point de rupture. Les candidats présenteront leur architecture technique et les mécanismes de scaling automatique disponibles.
+Le modèle économique de la solution devra refléter cette scalabilité. Le coût ne devra pas croître plus rapidement que le volume d'activité traité. Idéalement, des économies d'échelle seront réalisables grâce à la mutualisation des infrastructures Cloud. Les candidats présenteront une simulation de l'évolution des coûts sur cinq ans, intégrant différents scénarios de croissance (base, optimiste, accéléré), avec identification des éventuels paliers tarifaires et de leurs seuils de déclenchement.
+Les traitements batch (exécutions différées, calculs massifs, clôtures) devront être optimisés pour s'exécuter dans des fenêtres horaires compatibles avec l'activité quasi-continue du Groupe. La clôture journalière comptable, incluant la génération de toutes les écritures automatiques et les contrôles de cohérence, devra s'achever en moins de 2 heures. Les calculs de planification des approvisionnements, portant sur l'ensemble des références et des points de stockage, devront être finalisés avant 6h00 pour permettre le traitement des commandes fournisseurs dès l'ouverture des bureaux.
+La mise à jour du moteur de tarification, incluant l'activation des promotions planifiées et les changements de prix, devra pouvoir s'effectuer en temps réel sans interruption de service. Les synchronisations de stock entre l'ERP et les systèmes connectés (caisses, e-commerce, WMS) devront respecter une latence maximale de 5 minutes en conditions normales et de 15 minutes en période de forte charge. Les candidats détailleront leur architecture de réplication et les mécanismes de gestion des conflits.
+Les tests de performance feront partie intégrante du processus de recette et seront renouvelés régulièrement en exploitation. Les candidats devront proposer une méthodologie de tests de charge incluant : la définition des scénarios représentatifs (basés sur les profils d'utilisation réels), les outils de génération de charge et de mesure, les environnements de test dimensionnés de manière représentative, et les critères d'acceptation alignés sur les engagements contractuels. Un test de charge grandeur nature simulant les conditions du Black Friday sera réalisé avant le premier déploiement.
+La surveillance des performances en production sera continue et proactive. L'ERP devra exposer des métriques de performance détaillées (temps de réponse par transaction, utilisation des ressources, files d'attente) intégrables dans les outils APM (Application Performance Monitoring) du Groupe. Des alertes automatiques seront configurées pour détecter les dégradations avant qu'elles n'impactent les utilisateurs. Un tableau de bord de performance temps réel sera accessible aux équipes IT et aux sponsors métiers pour objectiver la qualité de service délivrée.
+La purge et l'archivage des données anciennes devront être gérés nativement par la solution pour maintenir les performances dans la durée. Une politique de rétention différenciée sera définie selon la nature des données : les données transactionnelles opérationnelles seront conservées en ligne pendant 3 ans puis archivées, les historiques analytiques seront maintenus 7 ans pour les besoins de tendance, les données personnelles seront purgées selon les durées RGPD. L'archivage préservera l'accès aux données pour les besoins d'audit et de conformité, avec des temps de restauration garantis.
+
+3.2.2 Disponibilité, continuité d'activité (PRA/PCA) et RTO/RPO
+La disponibilité de l'ERP est un enjeu critique pour le Groupe Retail Horizon, dont les opérations s'étendent sur une amplitude horaire très large. Les magasins sont ouverts 7 jours sur 7, de 10h à 20h en semaine et jusqu'à 21h le samedi, avec des extensions pendant les périodes commerciales fortes. La plateforme e-commerce fonctionne 24 heures sur 24 et génère des commandes en continu, avec des pics nocturnes non négligeables. Les équipes administratives travaillent sur des fuseaux horaires couvrant l'Europe et l'Asie du Sud-Est. Toute indisponibilité du système se traduit directement en perte de chiffre d'affaires et en dégradation de l'expérience client.
+L'objectif de disponibilité est fixé à 99,9% sur les heures ouvrées étendues, définies comme la plage 6h00-23h00 heure de Paris, tous les jours de l'année y compris les week-ends et jours fériés. Ce niveau de disponibilité correspond à un temps d'indisponibilité maximal toléré d'environ 8 heures par an sur cette plage, soit moins d'une minute par jour en moyenne. Les indisponibilités planifiées (maintenance, mises à jour) devront être programmées en dehors de cette plage critique, idéalement entre 2h00 et 5h00, avec un préavis minimum de 72 heures et une validation du calendrier par le Groupe.
+La disponibilité sera mesurée de manière objective et transparente par des outils de monitoring indépendants. Chaque incident sera tracé avec son heure de début, son heure de résolution et son impact fonctionnel. Un reporting mensuel de disponibilité sera produit et analysé lors des comités de pilotage. Les écarts par rapport aux engagements seront documentés avec leurs causes racines et les plans d'action correctifs. Des pénalités financières seront appliquées en cas de non-respect des SLA selon une grille définie contractuellement.
+Engagements de disponibilité (SLA) :
+Plage horaire
+Disponibilité cible
+Indisponibilité max/an
+Heures critiques (6h-23h)
+99,9%
+8 heures
+Heures non critiques (23h-6h)
+99,0%
+25 heures
+Périodes commerciales critiques*
+99,95%
+2 heures (sur la période)
+* Périodes commerciales critiques : soldes d'hiver (2 semaines), soldes d'été (2 semaines), Black Friday (4 jours), période de Noël (15 nov - 31 déc)
+Le Plan de Continuité d'Activité (PCA) définit les dispositions organisationnelles et techniques permettant de maintenir les activités critiques du Groupe en cas de sinistre majeur affectant le système d'information. L'ERP devra s'inscrire dans une architecture hautement résiliente avec redondance de tous les composants critiques : serveurs applicatifs en cluster actif-actif, bases de données répliquées en synchrone, équipements réseau doublés, alimentations électriques secourues. Aucun point unique de défaillance (SPOF) ne sera toléré sur le chemin critique des transactions.
+Pour une solution SaaS, l'éditeur devra démontrer la robustesse de son infrastructure et la maturité de ses pratiques de continuité d'activité. Les certifications attendues incluent ISO 22301 (management de la continuité d'activité) et les certifications des datacenters (Tier III minimum selon la classification Uptime Institute, soit 99,982% de disponibilité garantie par l'infrastructure). Les rapports d'audit SOC 2 Type II, couvrant notamment les critères de disponibilité et de résilience, seront fournis annuellement. Les résultats des tests de PRA de l'éditeur seront communiqués au Groupe.
+Le Plan de Reprise d'Activité (PRA) précise les procédures de restauration du service en cas de sinistre majeur rendant le site principal indisponible. Deux indicateurs clés définissent les objectifs de reprise. Le RTO (Recovery Time Objective) représente le délai maximal acceptable pour restaurer le service après un sinistre ; il est fixé à 4 heures pour l'ERP, ce qui signifie que le système devra être à nouveau opérationnel dans ce délai quel que soit le type de sinistre (panne matérielle, cyberattaque, catastrophe naturelle, erreur humaine).
+Le RPO (Recovery Point Objective) représente la perte de données maximale acceptable en cas de sinistre ; il est fixé à 1 heure pour l'ERP, ce qui signifie que les données pourront être restaurées à un état datant d'au maximum une heure avant le sinistre. Ce RPO impose une réplication des données en quasi temps réel vers un site de secours géographiquement distant (minimum 100 km du site principal pour se prémunir contre les sinistres régionaux). La réplication devra être synchrone ou asynchrone avec un décalage maximal d'une heure.
+Objectifs de reprise par criticité :
+Composant
+RTO
+RPO
+Criticité
+ERP Core (ventes, stocks, finance)
+4 heures
+1 heure
+CRITIQUE
+Interfaces temps réel (caisses, e-commerce)
+2 heures
+15 min
+CRITIQUE
+Reporting et BI
+8 heures
+4 heures
+ÉLEVÉE
+Environnements hors production
+24 heures
+24 heures
+STANDARD
+Les modes dégradés devront être prévus et documentés pour permettre la poursuite des activités les plus critiques en cas d'indisponibilité prolongée du système central. Pour les magasins, un mode caisse autonome permettra de continuer les ventes avec enregistrement local des transactions et synchronisation différée lors du rétablissement de la connexion. Ce mode devra fonctionner pendant au moins 48 heures avec conservation de l'intégralité des données de vente, de stock et de fidélité.
+Pour la logistique, les opérations d'expédition les plus urgentes devront pouvoir être traitées via des procédures manuelles de secours, avec édition locale des documents de transport et mise à jour ultérieure du système. Pour la comptabilité, les clôtures pourront être décalées de 24 heures maximum sans impact sur les obligations légales. Les procédures de fonctionnement en mode dégradé seront documentées, communiquées aux équipes concernées et testées lors des exercices annuels de PRA.
+La politique de sauvegarde garantira la capacité de restauration des données en toutes circonstances. Des sauvegardes complètes de la base de données seront réalisées quotidiennement, avec une rétention de 30 jours en ligne permettant une restauration rapide. Des sauvegardes incrémentales seront effectuées toutes les heures pour minimiser la perte de données en cas de restauration. Les sauvegardes seront stockées sur un site géographiquement distant et chiffrées pour garantir leur confidentialité.
+Les procédures de restauration seront testées trimestriellement pour vérifier leur opérationnalité et mesurer les temps effectifs de restauration. Ces tests incluront des restaurations complètes sur un environnement isolé, des restaurations partielles de tables spécifiques, et des restaurations à un point dans le temps (point-in-time recovery). Les résultats des tests seront documentés et les écarts par rapport aux objectifs feront l'objet de plans d'amélioration. Une restauration grandeur nature sera réalisée annuellement dans le cadre de l'exercice de PRA.
+La supervision proactive permettra de détecter et d'anticiper les incidents avant qu'ils n'impactent les utilisateurs. L'ERP devra exposer des métriques de santé (health checks) interrogeables par les outils de monitoring du Groupe. Ces métriques couvriront l'état des composants applicatifs, la disponibilité des services, les métriques de performance en temps réel et les indicateurs de capacité. L'intégration avec la plateforme de supervision Datadog sera réalisée via des API standards ou des agents dédiés.
+Un système d'alertes multi-niveaux sera configuré pour notifier les équipes appropriées selon la gravité de l'incident. Les alertes critiques (service indisponible, dégradation majeure) déclencheront une notification immédiate de l'astreinte via PagerDuty avec escalade automatique en cas de non-acquittement. Les alertes de warning (seuils approchés, anomalies détectées) seront traitées pendant les heures ouvrées. Un tableau de bord de disponibilité temps réel sera accessible aux équipes IT, aux sponsors métiers et à la direction pour suivre la qualité de service.
+
+3.2.3 Ergonomie, accessibilité et support multilingue
+L'ergonomie de l'interface utilisateur est un facteur déterminant pour l'adoption de l'ERP et la productivité des équipes. L'expérience utilisateur sur le système actuel SAP ECC est unanimement critiquée : interface datée et peu intuitive, navigation complexe nécessitant la mémorisation de codes de transaction, écrans surchargés d'informations non pertinentes, temps de formation long pour les nouveaux arrivants. Le taux de satisfaction mesuré en 2024 s'établit à seulement 42%, bien en deçà des standards attendus pour un outil de travail quotidien.
+La solution cible devra proposer une expérience utilisateur moderne, cohérente avec les standards actuels du web et des applications grand public auxquelles les collaborateurs sont habitués dans leur vie personnelle. L'interface devra être épurée et aérée, privilégiant la clarté à l'exhaustivité. La navigation devra être intuitive, permettant d'accéder aux fonctionnalités courantes en trois clics maximum. Les parcours utilisateurs devront être optimisés pour les tâches les plus fréquentes, avec des assistants guidant les processus complexes.
+L'interface devra s'adapter au profil et au contexte de l'utilisateur pour ne présenter que les informations et les actions pertinentes. Un vendeur en magasin aura un écran d'accueil centré sur la recherche de produits, la consultation des stocks et la création de commandes. Un contrôleur de gestion accédera directement à ses tableaux de bord financiers et à ses rapports d'analyse. Un acheteur visualisera ses commandes en cours et ses alertes fournisseurs. Cette contextualisation réduira la charge cognitive et accélérera l'exécution des tâches.
+La personnalisation de l'interface permettra à chaque utilisateur d'adapter son environnement de travail à ses préférences et à ses habitudes. Les fonctionnalités de personnalisation attendues incluent : la configuration des tableaux de bord personnels avec choix des widgets et de leur disposition, la sélection des colonnes affichées dans les listes et tableaux avec possibilité de réordonner et redimensionner, l'enregistrement de filtres et de recherches favorites pour un accès rapide aux vues fréquemment utilisées, la définition de raccourcis et de favoris vers les transactions les plus utilisées.
+Cette personnalisation devra être sauvegardée dans le profil utilisateur et synchronisée automatiquement quel que soit le poste de connexion. Un utilisateur se connectant depuis un autre ordinateur ou depuis une tablette retrouvera son environnement personnalisé. La personnalisation devra pouvoir être réinitialisée à la configuration par défaut si nécessaire. Les administrateurs pourront définir des configurations de référence par profil métier, servant de point de départ pour la personnalisation individuelle.
+Les fonctionnalités de recherche devront être puissantes et omniprésentes. Une barre de recherche globale, accessible depuis toutes les pages, permettra de trouver rapidement n'importe quelle information : articles par référence, désignation ou code-barres, clients par nom, email ou numéro de fidélité, commandes par numéro ou par critères multiples, etc. La recherche sera tolérante aux fautes de frappe et proposera des suggestions en temps réel. L'historique des recherches récentes et les recherches sauvegardées accéléreront l'accès aux informations fréquemment consultées.
+L'aide contextuelle et l'accompagnement des utilisateurs seront intégrés à l'interface. Chaque écran disposera d'une aide en ligne expliquant les fonctionnalités disponibles et les champs à renseigner. Des info-bulles sur les champs fourniront des explications complémentaires au survol. Des assistants (wizards) guideront les utilisateurs dans les processus complexes ou peu fréquents. Une base de connaissances consultable permettra de trouver des réponses aux questions courantes. Un système de notifications informera les utilisateurs des tâches en attente et des événements importants.
+L'accessibilité numérique est une exigence légale en France depuis la loi du 11 février 2005, renforcée par le décret du 24 juillet 2019 qui impose aux entreprises de plus de 250 millions d'euros de chiffre d'affaires de rendre leurs outils numériques accessibles. Au-delà de l'obligation légale, l'accessibilité est un engagement éthique du Groupe envers l'ensemble de ses collaborateurs, quelles que soient leurs capacités. La solution devra être conforme au niveau AA des Web Content Accessibility Guidelines (WCAG 2.1).
+Les fonctionnalités d'accessibilité requises incluent : la navigation complète au clavier sans nécessité d'utiliser la souris, la compatibilité avec les technologies d'assistance (lecteurs d'écran comme JAWS ou NVDA, plages braille), des contrastes de couleurs suffisants respectant les ratios WCAG (4.5:1 pour le texte normal, 3:1 pour le texte large), la possibilité d'agrandir le texte jusqu'à 200% sans perte de fonctionnalité, des alternatives textuelles pour tous les contenus non textuels (images, icônes, graphiques). Un audit d'accessibilité sera réalisé par un organisme indépendant avant la mise en production.
+Le support multi-devices est indispensable pour répondre aux usages diversifiés des collaborateurs dans leurs différents contextes de travail. L'interface devra être responsive et s'adapter automatiquement aux différentes tailles et résolutions d'écran : postes de travail fixes avec grands écrans pour les fonctions administratives, ordinateurs portables pour les managers et les commerciaux itinérants, tablettes utilisées par les vendeurs en surface de vente et les magasiniers en entrepôt, smartphones pour la consultation en mobilité et les validations urgentes.
+Les fonctionnalités critiques devront être accessibles et utilisables sur tous les supports, avec une ergonomie adaptée à chaque contexte d'usage. Sur tablette, les boutons et zones de toucher devront être dimensionnés pour une utilisation tactile confortable. Sur smartphone, les parcours seront simplifiés pour se concentrer sur les actions essentielles. Les candidats préciseront les navigateurs et systèmes d'exploitation supportés, avec engagement de compatibilité sur les versions récentes des principaux navigateurs (Chrome, Safari, Edge, Firefox) et des systèmes mobiles (iOS, Android).
+Langues supportées et priorités :
+Langue
+Pays concernés
+Utilisateurs
+Priorité
+Français
+France, Belgique, Suisse
+2 100
+P1 - Démarrage
+Anglais
+International, Asie
+800
+P1 - Démarrage
+Allemand
+Allemagne, Autriche, Suisse
+650
+P2 - Vague 2
+Néerlandais
+Pays-Bas, Belgique
+280
+P2 - Vague 2
+Italien
+Italie
+320
+P2 - Vague 2
+Espagnol
+Espagne
+180
+P3 - Vague 3
+Langues scandinaves
+Suède, Danemark, Norvège, Finlande
+420
+P3 - Vague 3
+Polonais, Tchèque
+Pologne, République tchèque
+150
+P3 - Vague 3
+Thaï
+Thaïlande
+100
+P4 - Vague Asie
+Le support multilingue complet est une exigence impérative pour un groupe international opérant dans 15 pays avec des équipes locales. L'interface utilisateur, les messages système, les libellés de champs, l'aide en ligne et les rapports devront être disponibles dans les 14 langues du Groupe listées ci-dessus. La traduction devra être de qualité professionnelle, réalisée par des traducteurs natifs connaissant le vocabulaire métier du retail. Les traductions automatiques non révisées ne seront pas acceptées. L'ajout de nouvelles langues devra être possible sans développement, via un mécanisme de fichiers de ressources.
+Les conventions locales devront être respectées au-delà de la simple traduction linguistique. Chaque pays et chaque culture a ses spécificités en termes de formats et d'usages qu'il convient de respecter pour éviter les erreurs et les incompréhensions. Les formats de date varient significativement selon les pays : JJ/MM/AAAA en France, MM/JJ/AAAA aux États-Unis, AAAA-MM-JJ en Suède. Les séparateurs numériques diffèrent également : virgule décimale et espace pour les milliers en France, point décimal et virgule pour les milliers dans les pays anglo-saxons.
+Les formats monétaires incluent la position du symbole (avant ou après le montant), le nombre de décimales et le séparateur. Le premier jour de la semaine est le lundi dans la plupart des pays européens mais le dimanche dans d'autres cultures. Les formats d'adresse postale varient considérablement selon les pays. L'ERP devra appliquer automatiquement les conventions appropriées selon la localisation de l'utilisateur, configurée dans son profil. Une surcharge individuelle devra être possible pour les utilisateurs travaillant dans un contexte international nécessitant des conventions spécifiques.
+Le support des caractères spéciaux et des alphabets non latins devra être complet. Les données pourront contenir des caractères accentués (français, allemand, scandinave), des caractères spéciaux (ß allemand, ø danois) et des caractères non latins (thaï, et potentiellement chinois, japonais, coréen pour les développements futurs en Asie). L'encodage UTF-8 sera utilisé de bout en bout pour garantir l'intégrité des données. Les recherches et les tris devront respecter les règles de collation propres à chaque langue.

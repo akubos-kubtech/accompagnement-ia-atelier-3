@@ -1,0 +1,327 @@
+6. Annexes
+Les annexes ci-après complètent le corps du cahier des charges en fournissant des informations détaillées, des modèles de documents à compléter par les candidats, et des éléments de référence nécessaires à l'élaboration d'une réponse complète et conforme.
+Liste des annexes :
+Réf.
+Intitulé
+Format
+À retourner
+Annexe A
+Matrice des exigences fonctionnelles
+Excel (.xlsx)
+Oui
+Annexe B
+Matrice des exigences non-fonctionnelles
+Excel (.xlsx)
+Oui
+Annexe C
+Matrice de conformité sécurité et RGPD
+Excel (.xlsx)
+Oui
+Annexe D
+Grille de réponse financière
+Excel (.xlsx)
+Oui
+Annexe E
+Modèle de CV des intervenants
+Word (.docx)
+Oui
+Annexe F
+Fiche de référence client
+Word (.docx)
+Oui
+Annexe G
+Cartographie applicative actuelle
+PDF
+Non (info)
+Annexe H
+Glossaire et acronymes
+PDF
+Non (info)
+Annexe I
+Accord de confidentialité (NDA)
+PDF
+Oui (signé)
+Annexe J
+Projet de contrat-cadre
+PDF
+Non (info)
+
+Annexe A : Matrice des exigences fonctionnelles
+Cette annexe constitue le document central de réponse aux exigences fonctionnelles. Elle recense l'ensemble des exigences organisées par domaine métier. Pour chaque exigence, le candidat devra indiquer le niveau de couverture et fournir un commentaire explicatif.
+Niveaux de couverture à utiliser :
+Code
+Signification
+S - Standard
+Fonctionnalité disponible en standard, sans paramétrage ni développement
+P - Paramétrage
+Nécessite un paramétrage ou configuration spécifique, pas de code
+D - Développement
+Nécessite un développement spécifique (code, extension, add-on)
+T - Tiers
+Couvert par une solution tierce intégrée (partenaire ISV)
+N - Non couvert
+Non couverte et non réalisable dans le cadre du projet
+
+Annexe B : Matrice des exigences non-fonctionnelles
+Cette annexe recense les exigences non-fonctionnelles (techniques, performance, sécurité, ergonomie). Les candidats devront indiquer leur niveau de conformité et fournir des éléments de preuve.
+Catégorie
+Périmètre
+Nb exigences
+Performance
+Temps de réponse, volumétrie, scalabilité, batch
+25 exigences
+Disponibilité
+SLA, PRA/PCA, RTO/RPO, maintenance
+18 exigences
+Sécurité
+Authentification, habilitations, chiffrement, audit
+35 exigences
+Architecture
+Cloud, API, intégration, environnements
+22 exigences
+Ergonomie
+UX, accessibilité, multilingue, multi-device
+20 exigences
+Exploitation
+Monitoring, logs, administration, support
+15 exigences
+TOTAL
+
+135 exigences
+
+Annexe C : Matrice de conformité sécurité et RGPD
+Cette annexe détaille les exigences en matière de sécurité de l'information et de protection des données personnelles (RGPD, NIS2). Les candidats devront joindre : certificat ISO 27001, rapport SOC 2 Type II, attestation de conformité RGPD, liste des sous-traitants.
+Domaine
+Thématiques principales
+Gouvernance sécurité
+Politique de sécurité, organisation, certifications (ISO 27001, SOC 2), audits
+Sécurité des accès
+Authentification (SSO, MFA), gestion des identités, habilitations
+Protection des données
+Chiffrement (transit, repos), gestion des clés, anonymisation
+Sécurité applicative
+Secure SDLC, tests de vulnérabilité, gestion des correctifs, OWASP
+Sécurité infrastructure
+Datacenter, réseau, firewall, anti-malware, segmentation, DDoS
+Traçabilité et audit
+Journalisation, pistes d'audit, détection d'intrusion, SIEM
+Gestion des incidents
+Procédure de réponse, notification, communication de crise
+Conformité RGPD
+Registre des traitements, DPO, droits des personnes, transferts hors UE
+Continuité et résilience
+PCA/PRA, sauvegardes, tests de restauration, résilience cyber
+
+Annexe D : Grille de réponse financière
+Cette annexe fournit le cadre de réponse pour la proposition financière. Les candidats devront compléter ce fichier Excel en respectant la structure imposée.
+Onglet
+Contenu à renseigner
+1. Synthèse
+Coût total projet, coût récurrent annuel, TCO 5 ans, hypothèses clés
+2. Licences / SaaS
+Détail par module, métrique de tarification, prix unitaire, volume, remises
+3. Services projet
+Détail par phase et profil : taux journalier, nombre de jours, total
+4. Formation
+Détail par type : contenu, durée, sessions, coût unitaire
+5. Maintenance
+Support et maintenance annuels : périmètre, niveaux de service, coût
+6. Hébergement
+Infrastructure, environnements, coût mensuel/annuel, scaling
+7. Options
+Prestations optionnelles : modules complémentaires, services additionnels
+8. Hypothèses
+Hypothèses de chiffrage, exclusions, conditions de validité
+9. TCO 5 ans
+Projection du coût total de possession sur 5 ans détaillé
+Profils types pour le chiffrage :
+Profil
+Description
+Directeur de projet
+Responsable global, interface direction, pilotage stratégique
+Chef de projet
+Pilotage opérationnel, coordination, reporting, gestion des risques
+Architecte solution
+Conception globale, cohérence technique, arbitrages architecture
+Consultant fonctionnel senior
+Conception détaillée, paramétrage complexe, expertise métier (>5 ans)
+Consultant fonctionnel
+Paramétrage, tests, documentation, support utilisateurs (2-5 ans)
+Développeur senior
+Développements complexes, intégrations, performance (>5 ans)
+Développeur
+Développements, interfaces, corrections, tests unitaires (2-5 ans)
+Expert data / migration
+Stratégie de migration, qualité données, ETL, réconciliation
+Formateur
+Animation des formations, création des supports pédagogiques
+
+Annexe E : Modèle de CV des intervenants clés
+Les candidats fourniront les CV des intervenants clés (minimum 5 CV) : Directeur de projet, Chef de projet, Architecte solution, et consultants seniors des domaines fonctionnels principaux.
+Section
+Informations attendues
+Identification
+Nom, prénom, rôle proposé sur le projet, années d'expérience totale
+Formation
+Diplômes, certifications professionnelles (ERP, gestion de projet)
+Compétences clés
+Domaines fonctionnels maîtrisés, modules de la solution, compétences techniques
+Expérience sectorielle
+Expérience retail, distribution, e-commerce (années, types de projets)
+Références projets
+3 à 5 projets significatifs : client, contexte, rôle, réalisations, durée
+Disponibilité
+Date de disponibilité, taux d'affectation prévu, localisation
+Langues
+Français (obligatoire), anglais (niveau), autres langues
+
+Annexe F : Fiche de référence client
+Les candidats fourniront au minimum 5 fiches de référence pour des projets ERP réalisés dans le secteur retail ou distribution. Au moins une référence devra concerner un déploiement international multi-pays en Europe.
+Rubrique
+Contenu attendu
+Client
+Nom de l'entreprise, secteur d'activité, taille (CA, effectif), implantation géographique
+Contexte du projet
+Enjeux, objectifs, système remplacé, contraintes particulières
+Périmètre fonctionnel
+Modules déployés, processus couverts, nombre de pays/sites, nombre d'utilisateurs
+Déroulement du projet
+Dates (début, go-live), durée, phases, méthodologie, équipe mobilisée
+Réalisations spécifiques
+Développements, intégrations, migration de données, conduite du changement
+Résultats et bénéfices
+Résultats quantifiés, bénéfices métiers obtenus, satisfaction client
+Contact référent
+Nom, fonction, coordonnées (avec accord préalable pour contact)
+
+Annexe G : Cartographie applicative actuelle
+Cette annexe présente la cartographie du système d'information actuel du Groupe Retail Horizon pour permettre aux candidats de comprendre l'écosystème applicatif.
+Domaine
+Application
+Éditeur
+Évolution
+ERP actuel
+SAP ECC 6.0
+SAP
+Remplacement
+E-commerce
+Salesforce Commerce Cloud
+Salesforce
+Conservation
+Caisses magasin
+Cegid Retail Y2
+Cegid
+Conservation
+WMS Entrepôts
+Manhattan SCALE
+Manhattan Associates
+Conservation
+CRM
+Salesforce Sales & Service
+Salesforce
+Conservation
+BI / Analytics
+Tableau + Snowflake
+Tableau / Snowflake
+Conservation
+SIRH
+Workday
+Workday
+Conservation
+ESB / Intégration
+MuleSoft Anypoint
+Salesforce
+Conservation
+PIM
+Akeneo PIM
+Akeneo
+Conservation
+
+Annexe H : Glossaire et acronymes
+Ce glossaire définit les termes et acronymes utilisés dans le cahier des charges.
+Terme
+Définition
+API
+Application Programming Interface - Interface de programmation applicative
+B2B / B2C
+Business to Business / Consumer - Commerce inter-entreprises / vers consommateur
+BI
+Business Intelligence - Informatique décisionnelle
+CRM
+Customer Relationship Management - Gestion de la relation client
+EDI
+Electronic Data Interchange - Échange de données informatisé
+ERP
+Enterprise Resource Planning - Progiciel de gestion intégré (PGI)
+ESB
+Enterprise Service Bus - Bus de services d'entreprise
+MFA
+Multi-Factor Authentication - Authentification multi-facteurs
+PCA / PRA
+Plan de Continuité / Reprise d'Activité
+PIM
+Product Information Management - Gestion des informations produits
+PoC
+Proof of Concept - Démonstration de faisabilité
+RGPD
+Règlement Général sur la Protection des Données
+RTO / RPO
+Recovery Time / Point Objective - Délai / Point de reprise objectif
+SaaS
+Software as a Service - Logiciel en tant que service
+SLA
+Service Level Agreement - Accord de niveau de service
+SKU
+Stock Keeping Unit - Unité de gestion de stock (référence article)
+SSO
+Single Sign-On - Authentification unique
+TCO
+Total Cost of Ownership - Coût total de possession
+UAT
+User Acceptance Testing - Recette utilisateur
+WMS
+Warehouse Management System - Système de gestion d'entrepôt
+
+Annexe I : Accord de confidentialité (NDA)
+Tout candidat souhaitant participer devra signer l'accord de confidentialité joint. L'accord couvre l'ensemble des informations communiquées : cahier des charges, documents complémentaires, réponses aux questions, informations lors des présentations. La durée de l'engagement est de 5 ans. L'accord signé sera retourné avec la proposition.
+Annexe J : Projet de contrat-cadre
+Le projet de contrat-cadre joint présente les principales clauses contractuelles envisagées. Les candidats examineront ce document et indiqueront leur acceptation ou leurs réserves motivées.
+Article
+Intitulé
+Points d'attention
+1
+Objet et périmètre
+Définition précise du périmètre
+2
+Durée et renouvellement
+5 ans + renouvellement 2 ans
+3
+Obligations du prestataire
+Moyens vs résultats
+4
+Obligations du client
+Prérequis, disponibilité équipes
+5
+Conditions financières
+Indexation, révision annuelle
+6
+Propriété intellectuelle
+Développements spécifiques
+7
+Confidentialité
+5 ans post-contrat
+8
+Protection des données (RGPD)
+Clauses sous-traitant
+9
+Responsabilité et assurances
+Plafonds, RC Pro 10M€
+10
+Réversibilité
+6 mois assistance minimum
+11
+Résiliation
+Pour faute, pour convenance
+12
+Litiges et droit applicable
+Droit français, tribunaux Paris

@@ -1,0 +1,191 @@
+3.3 Exigences techniques et d'architecture
+Les exigences techniques définissent le cadre architectural dans lequel l'ERP devra s'inscrire pour répondre aux besoins actuels et futurs du Groupe Retail Horizon. Ces choix structurants conditionnent la pérennité de l'investissement, la capacité d'évolution du système, son intégration dans l'écosystème applicatif existant et sa maintenabilité à long terme. L'architecture technique doit permettre d'atteindre les objectifs de performance, de disponibilité et de sécurité définis dans les sections précédentes.
+La stratégie IT du Groupe s'oriente résolument vers le Cloud, avec une ambition de réduire l'empreinte des infrastructures on-premise et de bénéficier de l'agilité, de la scalabilité et de l'innovation continue offertes par les plateformes Cloud modernes. Le projet de renouvellement ERP constitue une opportunité majeure d'accélérer cette transformation et de poser les fondations d'un système d'information plus agile et plus ouvert. Les candidats détailleront leur architecture technique et démontreront son adéquation avec cette vision stratégique.
+3.3.1 Modèle de déploiement (Cloud SaaS privilégié, On-premise)
+Le modèle de déploiement privilégié par le Groupe Retail Horizon est le Cloud SaaS (Software as a Service), dans lequel l'application est hébergée, opérée et maintenue par l'éditeur, et mise à disposition des utilisateurs via Internet sur la base d'un abonnement. Ce choix stratégique s'inscrit dans la politique IT groupe « Cloud First » adoptée en 2023, visant à réduire la dette technique, à accélérer l'innovation, à améliorer la résilience et à transformer les investissements capitalistiques en charges d'exploitation prévisibles et proportionnées à l'usage.
+Le modèle SaaS présente de nombreux avantages pour un groupe comme Retail Horizon. Il transfère à l'éditeur la responsabilité de l'infrastructure technique (serveurs, stockage, réseau, sécurité périmétrique), des opérations courantes (supervision, sauvegarde, maintenance préventive) et des montées de version applicatives. Cette externalisation permet aux équipes IT internes de se recentrer sur les activités à valeur ajoutée : accompagnement des métiers, intégration des systèmes, exploitation des données, innovation digitale. Elle réduit également le risque d'obsolescence technologique.
+Le modèle économique du SaaS, basé sur un abonnement récurrent plutôt que sur l'achat de licences perpétuelles, offre une meilleure visibilité budgétaire et une plus grande flexibilité. Les coûts sont lissés dans le temps et proportionnés au nombre d'utilisateurs ou au volume d'activité. L'entreprise n'a plus à financer les infrastructures et les ressources humaines nécessaires à l'hébergement et à l'exploitation. Les mises à jour sont incluses dans l'abonnement, garantissant un système toujours à jour fonctionnellement et techniquement.
+Comparaison des modèles de déploiement :
+Critère
+SaaS Public
+Cloud Privé / Hybride
+On-Premise
+Responsabilité infra
+Éditeur
+Partagée
+Client
+Mises à jour
+Automatiques, incluses
+Planifiées par client
+À charge client
+Scalabilité
+Élastique, automatique
+Manuelle ou semi-auto
+Limitée, coûteuse
+Personnalisation
+Configuration, extensions
+Large, avec contraintes
+Totale
+Modèle de coût
+OPEX (abonnement)
+OPEX + CAPEX
+CAPEX dominant
+Time-to-deploy
+Rapide (semaines)
+Moyen (mois)
+Long (6-12 mois)
+Préférence Groupe
+PRIVILÉGIÉ
+Acceptable
+Non souhaité
+L'hébergement de la solution devra être assuré dans des datacenters situés dans l'Union Européenne, pour des raisons de conformité réglementaire et de performance. Le Règlement Général sur la Protection des Données (RGPD) impose des contraintes strictes sur le transfert de données personnelles hors de l'UE. Même si des mécanismes juridiques existent pour autoriser ces transferts (clauses contractuelles types, décisions d'adéquation), le Groupe préfère éviter cette complexité en exigeant un hébergement européen. Par ailleurs, la proximité géographique des datacenters garantit une latence réseau optimale pour les utilisateurs européens qui représentent 95% de l'effectif.
+La localisation précise des datacenters (principal et secours) devra être communiquée par les candidats. Les datacenters devront disposer des certifications attestant de leur niveau de sécurité et de disponibilité : certification Tier III minimum selon la classification Uptime Institute (garantissant une disponibilité de 99,982% au niveau infrastructure), certification ISO 27001 pour le management de la sécurité de l'information, et rapports SOC 2 Type II couvrant les critères de sécurité, disponibilité, intégrité du traitement, confidentialité et respect de la vie privée.
+Le Groupe privilégiera les solutions hébergées sur des infrastructures Cloud publiques de premier plan : Microsoft Azure, Amazon Web Services (AWS) ou Google Cloud Platform (GCP). Ces hyperscalers offrent les meilleurs standards en termes de sécurité, de résilience et de capacité de scaling. Ils disposent de multiples datacenters en Europe (France, Allemagne, Pays-Bas, Irlande) permettant une redondance géographique efficace. Leurs certifications et leurs pratiques de sécurité font l'objet d'audits réguliers par des tiers indépendants. Leur santé financière garantit la pérennité du service.
+Le modèle SaaS multi-tenant, dans lequel plusieurs clients partagent la même instance applicative et la même infrastructure, est acceptable sous réserve de garanties strictes d'isolation des données. Les candidats expliqueront en détail leur architecture de multi-tenancy et les mécanismes assurant l'étanchéité absolue des données entre clients : isolation logique au niveau base de données (schémas séparés, row-level security) ou isolation physique (bases de données dédiées), chiffrement des données avec clés spécifiques par client, contrôles d'accès stricts empêchant tout accès croisé.
+Les performances devront être garanties contractuellement, indépendamment de la charge générée par les autres clients de la plateforme mutualisée. Les candidats expliqueront comment ils gèrent la notion de « noisy neighbor » (voisin bruyant) où l'activité d'un client pourrait impacter les performances des autres. Les mécanismes de réservation de ressources, de throttling et de fair-use seront détaillés. Des tests de performance en conditions réelles, sur l'environnement de production mutualisé, seront réalisés avant mise en service pour valider les engagements.
+Les montées de version de la solution SaaS devront être gérées de manière transparente et maîtrisée, sans impact négatif sur les opérations du Groupe. L'éditeur proposera un calendrier de releases prévisible et stable, idéalement trimestriel pour les évolutions fonctionnelles majeures, avec possibilité de correctifs de sécurité ou de bugs critiques déployés plus fréquemment. Les changements seront communiqués avec un préavis minimum de 30 jours, incluant les release notes détaillées, les impacts potentiels et les actions de préparation recommandées.
+Les évolutions majeures impactant les processus métiers, les interfaces utilisateur significatives ou les API devront faire l'objet d'une phase de test préalable en environnement de recette. Le Groupe disposera d'un accès anticipé aux nouvelles versions (programme early adopter ou preview) permettant de valider la compatibilité avec ses personnalisations et ses intégrations avant le déploiement en production. La possibilité de différer temporairement une mise à jour (opt-out limité dans le temps) sera appréciée pour les périodes commerciales critiques.
+La compatibilité ascendante des API et des personnalisations sera garantie contractuellement. Les interfaces programmatiques exposées par l'ERP devront rester stables entre les versions, avec une politique de dépréciation progressive (minimum 12 mois) pour les API amenées à évoluer. Les personnalisations réalisées dans le cadre des mécanismes d'extension prévus par l'éditeur (configurations, workflows, champs personnalisés, extensions low-code) devront être préservées lors des montées de version sans intervention manuelle.
+Environnements requis :
+Environnement
+Usage
+Dimensionnement
+Données
+Production
+Exploitation réelle
+100% capacité cible
+Données réelles
+Pré-production
+Validation pré-MEP, tests de charge
+80% capacité prod
+Copie anonymisée
+Recette (UAT)
+Tests fonctionnels métier
+50% capacité prod
+Jeu de données test
+Intégration
+Tests des interfaces
+30% capacité prod
+Données synthétiques
+Développement
+Développements, configurations
+20% capacité prod
+Données synthétiques
+Formation
+Formation des utilisateurs
+20% capacité prod
+Données pédagogiques
+Sandbox
+POC, expérimentations
+À la demande
+Vide ou minimal
+Les environnements hors production seront dimensionnés de manière appropriée à leur usage. L'environnement de pré-production devra être suffisamment dimensionné pour permettre des tests de charge représentatifs des conditions réelles d'exploitation. La création d'environnements temporaires à la demande (sandbox) devra être possible avec des délais courts (moins de 24 heures) pour les besoins de POC, d'expérimentation ou de reproduction d'incidents. Le coût de l'ensemble des environnements sera inclus dans la proposition financière des candidats.
+Bien que le modèle SaaS soit privilégié, le Groupe reste ouvert aux propositions alternatives si elles présentent des avantages significatifs démontrés. Le modèle Cloud privé (hébergement dédié sur infrastructure Cloud gérée par l'éditeur ou le client) pourra être envisagé si des contraintes réglementaires ou des exigences de personnalisation le justifient. Le modèle hybride (combinaison de composants SaaS et on-premise) pourra être pertinent pour les fonctionnalités nécessitant une intégration très étroite avec des systèmes internes. Les propositions on-premise ne seront considérées qu'en dernier recours.
+
+3.3.2 Intégration et interopérabilité (API, ESB)
+L'intégration de l'ERP dans l'écosystème applicatif du Groupe Retail Horizon est un facteur clé de succès du projet. L'ERP ne fonctionnera pas en silo mais constituera le hub central d'un système d'information distribué, échangeant des données en temps réel ou en batch avec de nombreuses applications périphériques. La qualité, la robustesse et la performance des interfaces conditionnent directement la fiabilité des données consolidées et l'efficacité des processus métiers transverses.
+L'architecture d'intégration cible du Groupe s'appuie sur un ESB (Enterprise Service Bus) centralisé, la plateforme MuleSoft Anypoint, déployée en 2020 pour rationaliser les flux inter-applicatifs et réduire la complexité des intégrations point-à-point. MuleSoft orchestre les échanges de données, assure la transformation des formats, gère les erreurs et offre une supervision centralisée des flux. L'ERP devra s'intégrer nativement dans cette architecture, en exposant ses fonctionnalités via des interfaces standardisées consommables par l'ESB.
+Écosystème applicatif et intégrations clés :
+Application
+Données échangées
+Mode
+Fréquence/SLA
+Salesforce Commerce Cloud (e-commerce)
+Commandes, stocks, prix, clients
+Temps réel (API)
+< 2 sec
+Cegid Retail Y2 (caisses)
+Ventes, stocks, fidélité
+Quasi temps réel
+< 5 min
+Manhattan WMS (entrepôts)
+Ordres, réceptions, expéditions
+Temps réel (API)
+< 1 min
+Salesforce CRM
+Clients, historique, fidélité
+Bidirectionnel (API)
+< 5 min
+Tableau (BI)
+Données analytiques
+Extraction (batch/API)
+Horaire à temps réel
+Banques (trésorerie)
+Relevés, paiements
+Fichiers (EBICS)
+Quotidien
+Transporteurs
+Expéditions, tracking
+API / EDI
+Temps réel
+Fournisseurs (EDI)
+Commandes, factures, ASN
+Fichiers (EDIFACT)
+Plusieurs fois/jour
+L'ERP devra exposer ses données et ses fonctionnalités via des API RESTful modernes et documentées. Les API devront respecter les standards et les bonnes pratiques du marché : architecture REST avec utilisation appropriée des verbes HTTP (GET, POST, PUT, PATCH, DELETE), format d'échange JSON, documentation au format OpenAPI/Swagger 3.0 permettant la génération automatique de clients et de documentation, versioning des API pour gérer les évolutions sans casser les intégrations existantes.
+La sécurité des API sera assurée selon les standards du marché. L'authentification utilisera le protocole OAuth 2.0 avec les flux appropriés selon les cas d'usage (client credentials pour les intégrations machine-to-machine, authorization code pour les accès utilisateur). Les tokens JWT (JSON Web Tokens) permettront une authentification stateless et une validation côté client. Le chiffrement TLS 1.3 sera obligatoire pour toutes les communications. Des mécanismes de rate limiting protégeront les API contre les abus et les attaques par déni de service.
+Le catalogue d'API disponibles sera un critère d'évaluation important de la maturité de la solution. Les candidats fourniront la liste exhaustive des API proposées avec leur documentation technique complète. La couverture fonctionnelle des API devra inclure a minima les domaines suivants : les référentiels (articles avec tous leurs attributs, clients, fournisseurs, tarifs et conditions commerciales, structure organisationnelle), les transactions (commandes clients et fournisseurs, factures, mouvements de stock, écritures comptables), les événements pour les intégrations événementielles, et les services métiers (calcul de disponibilité, simulation de prix, validation de commande, calcul de frais de port).
+Les mécanismes d'intégration événementielle (event-driven architecture) seront privilégiés pour les échanges nécessitant une réactivité maximale. L'ERP devra être capable de publier des événements métiers vers un bus de messages pour notifier les systèmes abonnés des changements survenant dans l'ERP. Les événements couvriront les créations, modifications et suppressions des objets métiers principaux, ainsi que les changements d'état significatifs (commande validée, facture émise, paiement reçu). Le format des événements sera documenté et versionné.
+Le Groupe utilise Apache Kafka comme plateforme de streaming d'événements. L'ERP devra être capable de publier nativement vers Kafka ou via un connecteur fourni par l'éditeur. Inversement, l'ERP devra pouvoir consommer des événements externes publiés sur Kafka pour réagir aux changements survenant dans d'autres systèmes (mise à jour de stock depuis le WMS, nouvelle commande depuis le e-commerce). Cette architecture découplée garantit la scalabilité des intégrations et permet une évolution indépendante des systèmes.
+Les intégrations fichiers (batch) resteront nécessaires pour certains flux non temps réel ou avec des partenaires ne disposant pas de capacités API. Les cas d'usage incluent : les échanges EDI avec les fournisseurs (commandes, avis d'expédition, factures au format EDIFACT ou équivalent), les imports de tarifs et de catalogues fournisseurs, les exports comptables vers les systèmes legacy des filiales non encore migrées, les échanges bancaires (relevés CAMT, ordres de paiement PAIN). L'ERP devra supporter les formats d'échange standards (CSV, XML, JSON, EDIFACT) et proposer des outils de mapping et de transformation.
+La planification, le suivi et la reprise sur erreur des traitements batch seront gérés par l'ordonnanceur du Groupe (Control-M). L'ERP devra exposer des interfaces permettant le déclenchement de jobs depuis l'ordonnanceur externe, le monitoring de leur exécution et la notification de leur statut de fin (succès, échec, avertissement). Les fichiers d'échange seront déposés sur des espaces de stockage sécurisés (SFTP, stockage Cloud) avec des conventions de nommage et d'archivage définies.
+La supervision des flux d'intégration est essentielle pour garantir la qualité des données échangées et réagir rapidement aux anomalies. L'ERP devra offrir des outils natifs de monitoring des API : volumétrie des appels par endpoint, temps de réponse (moyenne, percentiles, distribution), taux d'erreur par code HTTP, identification des consommateurs. Ces métriques seront exposées dans un format standard (Prometheus, OpenTelemetry) permettant leur intégration dans les outils de supervision du Groupe.
+Un journal des échanges conservera la trace de toutes les transactions d'intégration pour faciliter l'analyse des incidents, le débogage et les réconciliations. Ce journal inclura : l'horodatage précis, l'identifiant de corrélation permettant de tracer une transaction de bout en bout, le système source et le système cible, le payload échangé (avec masquage des données sensibles), le code retour et le message d'erreur éventuel. La rétention de ce journal sera de 90 jours minimum, avec archivage pour les besoins d'audit.
+Des alertes automatiques seront configurées pour notifier les équipes en cas d'anomalie sur les flux d'intégration : échec d'un flux critique, taux d'erreur dépassant un seuil, temps de réponse dégradé, volumétrie anormale (trop haute ou trop basse pouvant indiquer un problème). L'intégration avec les outils d'alerte du Groupe (Datadog, PagerDuty) permettra une prise en charge rapide des incidents selon leur criticité. Des tableaux de bord de santé des intégrations seront accessibles aux équipes IT et aux métiers concernés.
+
+3.3.3 Exigences en matière de gestion des données (migration, gouvernance)
+La gestion des données constitue un enjeu stratégique du projet de renouvellement ERP. Les données sont le patrimoine informationnel du Groupe Retail Horizon, accumulé au fil des années d'activité. Leur migration vers le nouveau système, leur qualité, leur gouvernance et leur protection conditionnent directement la réussite du projet et la création de valeur attendue. Cette section détaille les exigences relatives à la gestion des données tout au long du cycle de vie du projet et en exploitation.
+La migration des données depuis les systèmes actuels vers le nouvel ERP constitue un chantier critique du projet, souvent sous-estimé en complexité et en effort. Les données à reprendre couvrent l'ensemble des référentiels maîtres (articles, clients, fournisseurs, tarifs, structure organisationnelle) et un historique transactionnel significatif nécessaire aux besoins opérationnels et analytiques. La qualité de la migration conditionnera le démarrage opérationnel, la confiance des utilisateurs et la capacité à exploiter les historiques pour les analyses et les prévisions.
+Périmètre de la migration de données :
+Domaine de données
+Volume estimé
+Historique requis
+Source principale
+Articles et variantes
+450 000 fiches
+Actifs + 2 ans archivés
+SAP ECC (MM) + PIM
+Clients B2C
+8,5 millions
+Actifs (achat < 3 ans)
+Salesforce CRM
+Clients B2B
+12 000
+Tous actifs
+SAP ECC (SD) + CRM
+Fournisseurs
+850 actifs
+Tous + historique
+SAP ECC (MM)
+Tarifs et conditions
+2 millions lignes
+Actifs uniquement
+SAP ECC (SD)
+Commandes clients
+45 millions
+3 ans (opérationnel)
+SAP ECC + e-commerce
+Mouvements de stock
+200 millions
+2 ans
+SAP ECC + WMS
+Écritures comptables
+150 millions
+10 ans (légal)
+SAP ECC (FI)
+Points fidélité
+25 millions mvts
+5 ans
+Salesforce CRM
+La stratégie de migration sera définie conjointement avec l'intégrateur retenu lors de la phase de conception, en arbitrant entre exhaustivité de la reprise et complexité de mise en œuvre. Plusieurs approches sont envisageables selon les domaines de données. La reprise intégrale avec transformation consiste à migrer l'ensemble des données historiques en les adaptant au modèle de données cible ; cette approche maximise la continuité mais peut s'avérer complexe et risquée. La reprise des données actives avec archivage des historiques limite la migration aux données vivantes, les historiques restant accessibles dans un système d'archivage dédié ; cette approche réduit les risques mais impose de maintenir temporairement l'accès aux anciens systèmes.
+Les candidats proposeront des outils et une méthodologie de migration éprouvés, industrialisés et documentés. La méthodologie devra couvrir toutes les phases du processus de migration : analyse et profilage des données sources pour comprendre leur structure et leur qualité, mapping détaillé entre les modèles de données source et cible avec règles de transformation, extraction des données depuis les systèmes sources avec traçabilité, transformation et enrichissement selon les règles définies, chargement dans le système cible avec contrôles d'intégrité, validation fonctionnelle par les métiers avec critères d'acceptation définis.
+La qualité des données est un enjeu majeur que le projet devra adresser avec la plus grande attention. Les données actuelles présentent des problèmes connus de complétude (champs obligatoires non renseignés), de cohérence (données contradictoires entre systèmes), de conformité (formats non respectés) et de duplication (doublons de fiches clients et articles). Ces anomalies, accumulées au fil des années et des migrations successives, ne devront pas être transférées dans le nouveau système sous peine de compromettre sa valeur.
+Un chantier de data quality sera mené en amont de la migration, en parallèle des phases de conception et de paramétrage. Ce chantier comprendra : un audit de qualité des données sources avec identification et quantification des anomalies, la définition des règles de qualité cibles (complétude, unicité, validité, cohérence), la mise en place de processus de correction des anomalies critiques dans les systèmes sources, et la définition des règles de rejet ou de transformation des données non conformes lors de la migration. Des indicateurs de qualité seront suivis tout au long du projet.
+L'ERP cible devra intégrer des fonctionnalités natives de contrôle de la qualité des données. À la saisie, des contrôles de format, de cohérence et de complétude empêcheront l'introduction de données non conformes. Des règles de validation paramétrables permettront d'adapter les contrôles aux exigences métiers spécifiques. En continu, des outils de détection des anomalies identifieront les doublons potentiels, les incohérences entre données liées et les dérives par rapport aux standards définis. Des tableaux de bord de qualité des données permettront un pilotage proactif.
+La gouvernance des données définit les règles de gestion du patrimoine informationnel du Groupe, les rôles et responsabilités associés, et les processus de décision concernant les données. L'ERP devra supporter un modèle de data ownership clairement défini, attribuant la responsabilité de chaque domaine de données à un propriétaire métier identifié. Le propriétaire de données est responsable de la définition des règles de gestion, de la qualité des données de son domaine et de l'arbitrage en cas de conflit d'usage.
+Les règles de création, de modification et de suppression des données maîtres seront formalisées dans des workflows de validation paramétrables. La création d'un nouvel article, par exemple, suivra un processus de validation impliquant les achats (informations fournisseur), le marketing (informations commerciales), la logistique (informations de stockage) et la finance (informations comptables). Chaque étape sera tracée avec identification du valideur et horodatage. Les modifications de données sensibles (prix, conditions, informations client) seront soumises à validation avant prise d'effet.
+Un dictionnaire de données centralisé, ou catalogue de données, documentera l'ensemble des objets métiers et de leurs attributs. Pour chaque donnée, le dictionnaire précisera : sa définition métier univoque, son format technique et ses règles de validation, son propriétaire et les rôles autorisés à y accéder, ses sources et ses consommateurs dans l'écosystème applicatif, ses règles de rétention et d'archivage. Ce dictionnaire sera maintenu à jour et accessible aux équipes métiers et IT pour garantir une compréhension partagée du patrimoine de données.
+L'ERP devra s'intégrer avec la solution de Master Data Management (MDM) que le Groupe envisage de déployer à moyen terme pour gérer de manière centralisée les référentiels partagés. En attendant ce déploiement, l'ERP constituera le système maître (system of record) pour les données produits, clients et fournisseurs. Des mécanismes de synchronisation robustes diffuseront ces données maîtres vers les systèmes consommateurs (e-commerce, CRM, WMS, BI) avec gestion des conflits et traçabilité des mises à jour.
+La confidentialité des données sera assurée par un modèle d'habilitation granulaire permettant de restreindre l'accès aux données sensibles selon le profil de l'utilisateur. Certaines données devront pouvoir être masquées ou accessibles uniquement à des populations restreintes : les coûts d'achat et les marges (réservés aux acheteurs et au contrôle de gestion), les données personnelles détaillées des clients (service client et marketing), les informations de rémunération (RH). Le modèle d'habilitation devra permettre ces restrictions sans complexifier excessivement l'administration.
+Le chiffrement des données sensibles sera appliqué au repos (données stockées dans la base de données et les fichiers) et en transit (données échangées via les API et les interfaces). Les algorithmes de chiffrement seront conformes aux standards actuels (AES-256 minimum). La gestion des clés de chiffrement sera rigoureuse, avec stockage sécurisé, rotation périodique et séparation des responsabilités. Pour les environnements hors production (test, formation), les données de production seront anonymisées ou pseudonymisées avant copie, préservant leur cohérence fonctionnelle tout en protégeant les informations personnelles.
+La traçabilité des accès aux données et des modifications sera complète et inaltérable. Chaque consultation de données sensibles, chaque création, modification ou suppression d'enregistrement sera journalisée avec identification de l'utilisateur, horodatage, données avant/après modification. Ces pistes d'audit répondront aux exigences réglementaires (RGPD, contrôle fiscal) et aux besoins internes de sécurité et de traçabilité. L'accès aux logs d'audit sera lui-même restreint et tracé. La rétention des logs sera de 12 mois minimum en ligne, avec archivage long terme pour les besoins légaux.
