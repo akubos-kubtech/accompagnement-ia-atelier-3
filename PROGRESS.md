@@ -34,9 +34,9 @@
 
 ## Phase 4 : Exigences transverses
 
-- [ ] Exigences non-fonctionnelles (performance, disponibilité, UX)
-- [ ] Exigences techniques et d'architecture
-- [ ] Exigences sécurité et conformité (RGPD, etc.)
+- [x] Exigences non-fonctionnelles (performance, disponibilité, UX)
+- [x] Exigences techniques et d'architecture
+- [x] Exigences sécurité et conformité (RGPD, etc.)
 
 ## Phase 5 : Réconciliation et cohérence
 

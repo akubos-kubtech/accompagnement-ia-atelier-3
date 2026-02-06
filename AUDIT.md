@@ -139,3 +139,25 @@
 - WMS multi-pays : seul Manhattan Associates (France) est documenté dans le CDC — les WMS des filiales internationales ne sont pas précisés
 - 14 langues à supporter — potentiel impact sur le paramétrage et les tests
 - La matrice acteurs × domaines pourra servir de base pour l'atelier (identification des parties prenantes par flux)
+
+---
+
+## 2026-02-06 — Extraction des exigences transverses (Phase 4)
+
+**Action** : Remplissage des 3 fichiers d'exigences transverses à partir des sections 3.2, 3.3 et 3.4 du CDC.
+
+**Fichiers modifiés** :
+- `exigences-transverses/non-fonctionnelles.md` : performance (temps de réponse, batch, pics), disponibilité (SLA 99,9%, PCA/PRA, RTO 4h/RPO 1h, modes dégradés), ergonomie (UX, personnalisation, accessibilité WCAG 2.1 AA, responsive, 14 langues), scalabilité (x2 à 2030), maintenabilité
+- `exigences-transverses/techniques.md` : architecture cible (SaaS Cloud UE, 7 environnements), intégration (API REST/OAuth/Kafka/MuleSoft, supervision flux), gestion données (migration ~450M enregistrements, qualité, gouvernance, chiffrement AES-256), standards techniques consolidés
+- `exigences-transverses/securite-conformite.md` : sécurité infra/applicative (Security by Design, pentests, SIEM), IAM (Entra ID SSO+MFA, SoD), RGPD natif, conformité fiscale multi-pays (Factur-X, SDI, SII, SAF-T, ViDA), certifications (ISO 27001, SOC 2, ISO 22301)
+- `PROGRESS.md` : Phase 4 complétée
+
+**Décisions** :
+- Structure des fichiers adaptée pour être exploitable rapidement par les participants du TP (tableaux synthétiques plutôt que texte narratif)
+- Le fichier sécurité-conformité inclut une synthèse des exigences clés en tableau récapitulatif
+- Les standards techniques sont consolidés dans un tableau unique dans techniques.md
+
+**Points d'attention** :
+- La migration de données est massive (~450M enregistrements au total, 10 ans d'écritures comptables)
+- Le CDC mentionne Apache Kafka et Control-M comme composants d'intégration existants — information structurante pour l'architecture cible
+- Les obligations de facturation électronique varient par pays (Factur-X FR, SDI IT, SII ES, SAF-T nordiques) — complexité multi-pays significative
