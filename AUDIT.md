@@ -248,6 +248,31 @@
 
 ---
 
+## 2026-02-10 — Compilation des questions d'arbitrage (Exploration étape 4)
+
+**Action** : Compilation systématique de toutes les questions d'arbitrage identifiées dans les 4 documents d'exploration (réconciliation entités, flux inter-modules, zones de friction, matrice de dépendances). Classement en 3 catégories × 3 niveaux de criticité. Mapping des questions sur les phases d'implémentation.
+
+**Fichiers modifiés** :
+- `exploration/questions-arbitrage.md` : remplacé le template vide par 34 questions d'arbitrage structurées
+
+**Résultats clés** :
+- 34 questions au total : 9 P1 (bloquantes), 20 P2 (majeures), 5 P3 (mineures)
+- 3 catégories : incohérences entités (12), flux manquants (11), hypothèses à valider (11)
+- Phase 2 (GC+AA) concentre 14 questions — pivot du projet nécessitant un atelier client dédié
+- Chaque question porte un ID unique (ARB-Exx, ARB-Fxx, ARB-Hxx), des références croisées vers les FRIC-xxx et FLUX-xxx, et une « Question client » formulée pour l'atelier
+
+**Sources croisées** :
+- `exploration/reconciliation-entites.md` (8 questions + 8 écarts critiques)
+- `exploration/flux-inter-modules.md` (5 flux absents + 5 questions + 7 dépendances cachées)
+- `exploration/zones-friction.md` (30 frictions → questions de résolution)
+- `exploration/matrice-dependances.md` (mapping questions × phases)
+
+**Décisions** :
+- Dédoublonnage : quand une friction a un volet entité ET un volet flux, les deux aspects sont séparés en 2 questions distinctes (ex : FRIC-206 → ARB-E03 pour l'entité, ARB-F02 pour le flux)
+- La matrice questions × phases permet de planifier les ateliers client en amont de chaque phase d'implémentation
+
+---
+
 ## 2026-02-10 — Cartographie consolidée de l'intégration ERP
 
 **Action** : Création d'un document de synthèse consolidant l'ensemble des analyses d'exploration (entités, flux, frictions, dépendances, séquencement) en un seul artefact lisible par 3 audiences (Tech Lead, BA, Chef de Projet).
