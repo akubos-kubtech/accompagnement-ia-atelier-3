@@ -19,12 +19,12 @@
 
 | Propriété | Valeur |
 |-----------|--------|
-| **Domaine maître** | Transversal (ERP + Akeneo PIM pour les données enrichies) |
-| **Domaines consommateurs** | Gestion commerciale, Achats, Supply Chain, Stocks & Entrepôts, Finance, Reporting |
+| **Domaine maître** | Gestion commerciale (ERP = référentiel maître pour les données de base). Akeneo PIM fournit les données enrichies (descriptions, attributs marketing, médias) |
+| **Domaines consommateurs** | Achats, Supply Chain, Stocks & Entrepôts, Finance, Reporting |
 | **Volumétrie** | 218 000 références actives (SKU) |
 | **Typologies** | Standard, à variantes, sérialisé, par lot, à date de péremption |
 | **Données partagées** | SKU, libellé, catégorie/famille, prix de base, attributs stock, fournisseur principal, nomenclature douanière |
-| **Points de friction potentiels** | Partage des responsabilités ERP/Akeneo PIM, cohérence prix entre domaines commercial/achats/finance, gestion des variantes |
+| **Points de friction potentiels** | Gouvernance des attributs entre ERP (données de base : SKU, prix, catégorie) et Akeneo PIM (données enrichies : descriptions, médias), cohérence prix entre domaines commercial/achats/finance, gestion des variantes |
 
 ### Fournisseur
 
@@ -51,7 +51,7 @@
 | Entité | GC | AA | SC | FC | SE | CM | RB |
 |--------|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
 | **Client** | R | | | R | | **M** | R |
-| **Article** | R | R | R | R | R | | R |
+| **Article** | **M** | R | R | R | R | | R |
 | **Fournisseur** | | **M** | R | R | R | | R |
 | **Stock** | R | | R | R | **M** | | R |
 | **Commande client** | **M** | | R | R | R | R | R |

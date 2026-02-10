@@ -161,3 +161,21 @@
 - La migration de données est massive (~450M enregistrements au total, 10 ans d'écritures comptables)
 - Le CDC mentionne Apache Kafka et Control-M comme composants d'intégration existants — information structurante pour l'architecture cible
 - Les obligations de facturation électronique varient par pays (Factur-X FR, SDI IT, SII ES, SAF-T nordiques) — complexité multi-pays significative
+
+---
+
+## 2026-02-10 — Correction du référentiel Article dans referentiels-transverses.md
+
+**Action** : Correction de deux erreurs identifiées par traçage des sources CDC dans `00-contexte/referentiels-transverses.md`.
+
+**Fichiers modifiés** :
+- `00-contexte/referentiels-transverses.md` : section « Article / Produit » et matrice de partage des entités
+
+**Corrections** :
+1. **Matrice de partage** : Article passé de R (reader) à **M** (maître) dans la colonne GC (Gestion commerciale)
+2. **Section Article / Produit** : domaine maître corrigé de « Transversal (ERP + Akeneo PIM) » à « Gestion commerciale (ERP = référentiel maître) ». Akeneo PIM repositionné comme source complémentaire pour les données enrichies. Mention erronée de SE comme « source » retirée.
+
+**Sources CDC ayant motivé la correction** :
+- `cdc-decoupe/integrations-cibles` → « ERP = référentiel maître pour les articles (vs Akeneo PIM) »
+- `cdc-decoupe/11-exigences-techniques.txt:147` → migration articles depuis « SAP ECC (MM) + PIM »
+- Flux Akeneo : ERP → PIM (données de base : SKU, prix), PIM → ERP (données enrichies : descriptions, médias)
