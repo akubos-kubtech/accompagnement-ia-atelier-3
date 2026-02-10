@@ -164,6 +164,29 @@
 
 ---
 
+## 2026-02-10 — Détection des zones de friction (Exploration étape 2)
+
+**Action** : Croisement systématique de toutes les analyses inter-domaines (réconciliation entités, cartographie flux, règles de gestion, ENF, intégrations cibles) pour identifier les zones de friction.
+
+**Fichiers modifiés** :
+- `exploration/zones-friction.md` : remplacé le template vide par l'analyse complète des 29 frictions
+
+**Résultats clés** :
+- 29 frictions identifiées : 8 bloquantes, 16 majeures, 5 mineures
+- 6 catégories : incohérences de définition (6), flux orphelins (5), hypothèses contradictoires (5), RG en conflit (5), référentiels non définis (4), séquencement impossible (4)
+- Domaines les plus exposés : GC (18 frictions, 4 bloquantes), SE (14, 4 bloquantes)
+- Couples les plus en friction : GC↔CM (7), GC↔SE (7)
+- Frictions bloquantes majeures : stock « disponible » (4 définitions), vente POS non modélisée, transaction POS synchrone+async, cascade tarifaire incomplète (fidélité absente), cross-docking sans orchestrateur, paiement par points (dépendance circulaire), magasin sans référentiel
+
+**Sources croisées** :
+- `exploration/reconciliation-entites.md` (type 1)
+- `exploration/flux-inter-modules.md` (types 2, 3, 6)
+- `domaines/*/regles-gestion.md` (type 4)
+- `exigences-transverses/non-fonctionnelles.md` (type 3)
+- `00-contexte/integrations-cibles.md` (types 2, 3)
+
+---
+
 ## 2026-02-10 — Cartographie des flux inter-modules (Exploration étape 1)
 
 **Action** : Identification systématique de tous les flux de données entre les 7 domaines fonctionnels à partir des spécifications, entités, règles de gestion et intégrations cibles.

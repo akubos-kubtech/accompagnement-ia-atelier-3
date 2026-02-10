@@ -47,6 +47,6 @@
 ## Phase 6 : Préparation de la zone d'exploration (TP)
 
 - [x] Cartographie des flux inter-modules (46 flux, 5 absents critiques)
-- [ ] Zones de friction
+- [x] Zones de friction (29 frictions, 8 bloquantes)
 - [ ] Matrice de dépendances
 - [ ] Questions d'arbitrage
