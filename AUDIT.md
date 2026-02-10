@@ -248,6 +248,28 @@
 
 ---
 
+## 2026-02-10 — Cartographie consolidée de l'intégration ERP
+
+**Action** : Création d'un document de synthèse consolidant l'ensemble des analyses d'exploration (entités, flux, frictions, dépendances, séquencement) en un seul artefact lisible par 3 audiences (Tech Lead, BA, Chef de Projet).
+
+**Fichiers créés** :
+- `exploration/cartographie-consolidee.md` : cartographie consolidée en 6 sections + annexe
+
+**Contenu** :
+1. Vue macro : diagramme ASCII des modules et flux principaux, profil de chaque module
+2. Entités partagées : 16 entités avec statut de cohérence et problème principal
+3. Flux critiques : 31 flux HAUTE criticité (2 absents, 4 implicites, 25 documentés)
+4. Frictions majeures : 9 BLOQUANT + 16 MAJEUR avec matrice d'exposition par domaine
+5. Matrice de dépendances : 7×7 avec classification (2 structurelles / 24 transactionnelles)
+6. Ordre d'implémentation : 5 phases, chemin critique, frictions à résoudre par phase, livraison incrémentale RB
+
+**Décisions** :
+- Document conçu comme point d'entrée unique — chaque section renvoie aux documents détaillés en annexe
+- Les flux critiques sont triés par statut de documentation (absents → implicites → documentés) pour prioriser l'attention
+- La matrice d'exposition domaine × frictions donne une vue CP des risques par périmètre
+
+---
+
 ## 2026-02-10 — Séquencement d'implémentation par phases (Exploration étape 3 bis)
 
 **Action** : Refonte complète du séquencement d'implémentation dans matrice-dependances.md. Classification rigoureuse des 26 dépendances (structurelles vs transactionnelles/bouchonnables), séquencement en 5 phases (vs 6 précédemment) avec parallélisme maximisé, chemin critique formalisé.
