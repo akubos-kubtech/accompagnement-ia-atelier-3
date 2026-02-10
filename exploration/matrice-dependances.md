@@ -212,74 +212,185 @@ Les modules fondations sont ceux dont le plus de domaines dépendent et qui dép
 
 ---
 
-## Graphe de dépendances et chemins critiques
+## Classification des dépendances
 
-### Chemin critique 1 : Cycle de vente (web)
+> **Structurelle (S)** : le module ne peut être ni conçu ni paramétré sans cette donnée — non bouchonnable.
+> **Transactionnelle (T)** : le module fonctionne en mode dégradé avec un bouchon — intégration réelle nécessaire avant go-live.
 
-```
-CM (client) ──► GC (commande) ──► SE (réservation) ──► SC (expédition) ──► SE (picking)
-                    │                                       │
-                    └──► FC (écriture vente + facture)       └──► GC (tracking → client)
-```
-**6 modules impliqués, 8 flux, tous critiques.** Défaillance de n'importe quel maillon = commande non honorée.
+| De → Vers | Nature de la dépendance | Type | Bouchon possible |
+|-----------|------------------------|:----:|-----------------|
+| GC → SE | Stock ATP pour vente web/magasin | T | Mode dégradé caisse (48h autonome), vente web KO |
+| GC → CM | Référentiel client maître | **S** | **Non** — pas de commande sans fiche client |
+| GC → SC | Tracking, statut livraison | T | Commande prise sans suivi livraison |
+| GC → FC | Encours client, facture émise | T | Commande passe sans contrôle encours |
+| AA → SE | Seuil stock → réappro automatique | T | Commande fournisseur manuelle |
+| AA → SC | Propositions MRP | T | Achat sur seuil ou achat manuel |
+| AA → FC | Confirmation règlement fournisseur | T | Suivi encours lecture directe |
+| SC → GC | Commande validée → expédition | T | Injection commandes de test |
+| SC → AA | Commandes fournisseurs en cours (MRP) | T | MRP moins précis mais fonctionnel |
+| SC → SE | Niveaux stock pour MRP + confirmation expédition | **S** | **Non** — MRP impossible sans données stock |
+| SC → RB | Prévisions vente IA | T | Algorithmes classiques SC suffisent |
+| FC → GC | Données vente → écriture comptable | T | Saisie manuelle en rattrapage |
+| FC → AA | Three-way matching (PO + réception + facture) | T | Saisie directe facture sans rapprochement |
+| FC → SE | Variation stock, valorisation fin de période | T | Pas de compta stock automatique |
+| FC → CM | Données client → compte tiers | T | Création manuelle compte tiers |
+| SE → GC | Réservation stock, retours | T | Mouvements de stock manuels |
+| SE → AA | Réception validée → entrée stock | T | Entrée stock manuelle |
+| SE → SC | Ordre picking / expédition | T | Préparation sur liste manuelle |
+| SE → FC | Méthode de valorisation (norme comptable) | T | Pré-configuration paramétrique |
+| CM → GC | Historique achats, fidélité | T | Import initial d'historique |
+| RB → (6) | Données de tous les modules | T | Dashboards vides puis incrémentaux |
 
-### Chemin critique 2 : Cycle d'achat
-
-```
-SC (MRP) ──► AA (commande fournisseur) ──► SE (réception) ──► FC (three-way matching)
-                                               │
-                                               └──► FC (écriture variation stock)
-```
-**4 modules impliqués, 6 flux.** Le MRP (SC) est le point d'entrée, le three-way (FC) est le point de sortie.
-
-### Chemin critique 3 : Valorisation et clôture
-
-```
-SE (mouvements) ──► SE (valorisation) ──► FC (écritures) ──► FC (clôture) ──► RB (reporting)
-```
-**3 modules, séquentiel strict.** Pas de parallélisation possible.
+> **Résultat** : sur 26 dépendances, **2 sont structurelles** (GC→CM, SC→SE), **24 sont transactionnelles** (bouchonnables). Le parallélisme est élevé.
 
 ---
 
-## Proposition de séquencement d'implémentation
+## Séquencement d'implémentation par phases
 
-> Basé sur les dépendances : implémenter d'abord les fondations, puis les consommateurs.
+> Contraintes appliquées :
+> 1. Un module ne peut être implémenté que si ses dépendances structurelles sont en place
+> 2. Les dépendances transactionnelles sont bouchonnées temporairement
+> 3. Parallélisme maximisé (modules indépendants déployés ensemble)
 
-| Phase | Modules | Justification | Prérequis |
-|:-----:|---------|--------------|-----------|
-| **0** | **Référentiels transverses** : Article, Client, Fournisseur, Site/Magasin, Pays, Devise | Toutes les fondations dépendent de ces données de base (FRIC-501, FRIC-503, FRIC-504). Sans référentiels, aucun module ne peut être paramétré. | Aucun |
-| **1** | **SE** (Stocks) + **CM** (CRM) | SE est fondation (stock ATP pour GC, niveaux pour SC, valorisation pour FC). CM est le référentiel client maître (ne dépend que de GC, qui n'existe pas encore — démarrage avec import). Les deux sont indépendants l'un de l'autre → parallélisables. | Phase 0 |
-| **2** | **GC** (Gestion commerciale) | GC dépend de SE (stock) et CM (client), les deux étant disponibles en phase 1. GC est le producteur d'événements métier dont 5 modules ont besoin. | Phase 1 (SE + CM) |
-| **3** | **AA** (Achats) + **FC** (Finance) | AA dépend de SE (réception → stock). FC dépend de GC (écritures vente), AA (three-way) et SE (valorisation) — tous disponibles. AA et FC sont partiellement parallélisables (FC peut démarrer avec les écritures de vente pendant qu'AA se met en place). | Phase 2 (GC) |
-| **4** | **SC** (Supply Chain) | SC dépend de GC (commandes), SE (stock MRP), AA (commandes fournisseurs en cours). Tout est disponible après phase 3. Le MRP est le processus le plus complexe et nécessite des données historiques. | Phase 3 (AA) |
-| **5** | **RB** (Reporting & BI) | RB dépend de tous les modules (6/6). Il ne peut être déployé complètement qu'en dernier. Des dashboards partiels peuvent être livrés dès la phase 2 (données de vente). | Phase 4 (tous modules) |
+### Phase 0 — Référentiels transverses
 
-### Visualisation du séquencement
+| | |
+|---|---|
+| **Modules** | Article, Client, Fournisseur, Site/Magasin, Pays, Devise |
+| **Prérequis** | Aucun |
+| **Justification** | Les 7 modules consomment ces référentiels. Sans modèle de données partagé (identifiants, structures, codification), aucun module ne peut être paramétré. Résout directement FRIC-501 (Magasin sans référentiel), FRIC-503 (Pays absent), FRIC-504 (Devise absente). |
+| **Risque** | **Arbitrage Article** : qui est maître entre ERP (GC) et PIM (Akeneo) ? Bloque la définition du modèle (FRIC-101). **Arbitrage Magasin** : 3 noms pour 3 concepts différents (FRIC-501) — nécessite décision client avant toute implémentation. |
+
+### Phase 1 — SE (Stocks) + CM (CRM) `parallèles`
+
+| | |
+|---|---|
+| **Modules** | SE (Stocks & Entrepôts), CM (CRM & Marketing) — en parallèle |
+| **Prérequis** | Phase 0 (référentiels définis) |
+| **Justification** | **SE** est fondation données : stock ATP consommé par 5 modules (GC, SC, AA, FC, RB). **CM** est fondation référentiel : le client maître est une **dépendance structurelle** de GC (seule dep. structurelle avec SC→SE). SE et CM sont **mutuellement indépendants** dans la matrice (aucun X à l'intersection) → parallélisables. |
+| **Bouchons nécessaires** | SE bouchonne : réservations (GC), réceptions (AA), picking (SC), méthode valorisation (FC = pré-config). CM bouchonne : historique achats (GC = import initial). |
+| **Risque** | **SE** : intégration Manhattan WMS multi-sites, 4 définitions de stock « disponible » (FRIC-103) à résoudre. **CM** : intégration Salesforce CRM, le programme fidélité ne sera testable qu'après GC (Phase 2) — FRIC-601 (dépendance circulaire CM↔GC) latent. |
+
+### Phase 2 — GC (Gestion commerciale) + AA (Achats) `parallèles`
+
+| | |
+|---|---|
+| **Modules** | GC (Gestion commerciale), AA (Achats & Approvisionnement) — en parallèle |
+| **Prérequis** | Phase 1 — SE fournit le stock réel, CM fournit le client réel |
+| **Justification** | **GC** : ses 2 dépendances structurelles sont satisfaites (CM client = Phase 1, SE stock = Phase 1). GC est le producteur d'événements métier dont 5 modules dépendent — le déployer tôt débloque toute la chaîne aval. **AA** : ne dépend structurellement que des référentiels (Phase 0) et bénéficie du stock réel SE (Phase 1) pour les seuils de réappro. **GC et AA sont mutuellement indépendants** dans la matrice (aucun X à leur intersection) → parallélisables. |
+| **Bouchons nécessaires** | GC bouchonne : tracking (SC), encours client (FC). AA bouchonne : propositions MRP (SC), confirmation règlement (FC). |
+| **Risque** | **GC** : intégration POS Cegid + e-commerce Salesforce = point d'intégration le plus complexe du projet. FRIC-301 (POS synchrone + asynchrone) et FRIC-601 (fidélité circulaire CM↔GC) émergent ici. **AA** : sans MRP (SC en Phase 3), les achats sont manuels ou sur seuil uniquement — risque de rupture si la phase dure longtemps. |
+
+### Phase 3 — FC (Finance) + SC (Supply Chain) `parallèles`
+
+| | |
+|---|---|
+| **Modules** | FC (Finance & Comptabilité), SC (Supply Chain & Logistique) — en parallèle |
+| **Prérequis** | Phase 2 — GC fournit les données de vente, AA fournit les données d'achat |
+| **Justification** | **FC** : toutes ses dépendances sont satisfaites — GC (écritures de vente, Factur-X), AA (three-way matching), SE (valorisation stock), CM (comptes tiers). **SC** : toutes ses dépendances sont satisfaites — GC (commandes → expédition), AA (PO en cours → MRP), SE (stock → MRP). Sa seule dépendance structurelle (SE) est disponible depuis Phase 1. **FC et SC sont mutuellement indépendants** dans la matrice → parallélisables. |
+| **Bouchons retirés** | Tous les bouchons des Phases 1-2 sont remplacés par des flux réels. Seul bouchon restant : SC bouchonne les prévisions IA (RB). |
+| **Risque** | **FC** : le flux Factur-X GC→FC (FRIC-206) doit être construit — il n'existe pas dans les SF actuelles. Three-way matching multi-devises (8 devises, 15 pays) = complexité élevée. **SC** : le MRP nécessite de l'historique de vente GC (Phase 2) — si la Phase 2 a été courte, les prévisions seront pauvres. Le cross-docking (FRIC-602) nécessite un orchestrateur non défini dans le CDC. |
+
+### Phase 4 — RB (Reporting & BI)
+
+| | |
+|---|---|
+| **Modules** | RB (Reporting & BI) |
+| **Prérequis** | Phase 3 — les 6 modules opérationnels sont en place |
+| **Justification** | RB dépend de **6 modules sur 6** (consommateur pur). Il ne peut être complet qu'en dernier. |
+| **Bouchons retirés** | SC retire le bouchon RB → les prévisions IA deviennent réelles. |
+| **Risque** | **Qualité des données** : RB est le premier endroit où les incohérences d'intégration deviennent visibles. Si les phases précédentes ont produit des données non réconciliées (stock, écritures comptables), RB les exposera. **Volumétrie** : Snowflake doit absorber les données de 7 domaines (estimé > 500M lignes). |
+
+### Livraison incrémentale de RB
+
+Bien que RB soit en Phase 4, des dashboards partiels peuvent être livrés plus tôt :
+
+| Disponible à partir de | Dashboards |
+|:-:|---|
+| Phase 1 | Stock temps réel (SE), base clients (CM) |
+| Phase 2 | Ventes et CA (GC), suivi achats (AA) |
+| Phase 3 | Reporting financier (FC), KPI supply chain (SC) |
+| Phase 4 | Reporting complet + prévisions IA |
+
+---
+
+## Visualisation
 
 ```
-Phase 0 ─── Référentiels (Article, Client, Fournisseur, Site, Pays)
+Phase 0 ─── Référentiels (Article, Client, Fournisseur, Site, Pays, Devise)
                │
-Phase 1 ──┬── SE (Stocks & Entrepôts)
-           └── CM (CRM & Marketing)          ← parallèles
+Phase 1 ──┬── SE (Stocks & Entrepôts)       ← fondation données (stock)
+           └── CM (CRM & Marketing)          ← fondation référentiel (client)
                │
-Phase 2 ───── GC (Gestion commerciale)       ← pivot central
+Phase 2 ──┬── GC (Gestion commerciale)      ← pivot événementiel
+           └── AA (Achats & Appro)           ← cycle d'achat
                │
-Phase 3 ──┬── AA (Achats & Appro)
-           └── FC (Finance & Comptabilité)   ← partiellement parallèles
+Phase 3 ──┬── FC (Finance & Comptabilité)   ← intégrateur comptable
+           └── SC (Supply Chain)             ← orchestrateur logistique
                │
-Phase 4 ───── SC (Supply Chain & Logistique)
-               │
-Phase 5 ───── RB (Reporting & BI)            ← livraison incrémentale possible
+Phase 4 ───── RB (Reporting & BI)           ← consommateur final (incrémental)
 ```
 
-### Points d'attention pour le séquencement
+**5 phases, 3 paliers de parallélisme, 24 bouchons temporaires retirés progressivement.**
 
-1. **Phase 0 est bloquante** — Les 4 référentiels absents (FRIC-501/503/504 + Article unifié FRIC-101) doivent être définis avant tout. C'est un travail de conception, pas d'implémentation.
+---
 
-2. **GC (phase 2) est le pivot** — Tant que GC n'est pas en place, aucun événement métier ne circule. Les phases 3-5 ne peuvent pas démarrer.
+## Chemin critique
 
-3. **RB peut livrer de manière incrémentale** — Dashboards de vente dès la phase 2, dashboards stock + fidélité dès la phase 2, reporting financier dès la phase 3, reporting complet en phase 5.
+Le chemin critique est la **séquence la plus longue de dépendances non-réductibles** qui détermine la durée minimale du projet.
 
-4. **La fidélité (CM↔GC) est un risque d'intégration majeur** — CM est déployé en phase 1 mais la fidélité ne fonctionne qu'après GC (phase 2). Les FRIC-301/601 (POS synchrone, dépendance circulaire) doivent être résolues à ce moment.
+### Chemin 1 : Référentiel client → Vente → Comptabilité
 
-5. **Le MRP (SC, phase 4) nécessite de l'historique** — Pour que les prévisions soient pertinentes, SC a besoin de plusieurs mois de données de vente (GC). Prévoir une période de constitution d'historique après la phase 2.
+```
+Référentiels ──► CM (client maître) ──► GC (événements vente) ──► FC (écritures + Factur-X) ──► RB
+  Phase 0           Phase 1                Phase 2                    Phase 3                  Phase 4
+```
+
+Justification de chaque maillon :
+1. **Réf → CM** : CM a besoin du modèle Client défini en Phase 0
+2. **CM → GC** : dépendance **structurelle** — pas de commande sans fiche client
+3. **GC → FC** : FC ne peut produire d'écritures comptables ni de Factur-X sans données de vente réelles (bouchon intenable pour go-live — obligation légale)
+4. **FC → RB** : le reporting financier est réglementaire (pas de bouchon acceptable)
+
+### Chemin 2 : Stock → Vente → Supply Chain
+
+```
+Référentiels ──► SE (stock) ──► GC (réservation + vente) ──► SC (MRP + expédition) ──► RB
+  Phase 0         Phase 1           Phase 2                      Phase 3               Phase 4
+```
+
+Justification :
+1. **Réf → SE** : SE a besoin du modèle Article et Site
+2. **SE → SC** : dépendance **structurelle** — MRP impossible sans données stock
+3. **GC → SC** : SC ne peut expédier sans commandes validées
+4. **SC → RB** : les KPI supply chain alimentent le reporting
+
+### Conclusion
+
+Les deux chemins ont la **même longueur : 5 phases (incompressible)**. Ils convergent sur GC (Phase 2) qui est le point de jonction des deux chaînes de dépendances structurelles.
+
+```
+     CM (S)──►─┐
+               ├──► GC ──► FC ──► RB
+     SE (S)──►─┘     │
+               ▲     └──► SC ──► RB
+               │
+          2 dépendances
+          structurelles
+          convergent sur GC
+```
+
+**GC est le nœud critique du projet** : il se trouve à l'intersection des deux seules dépendances structurelles de la matrice. Tout retard sur GC décale mécaniquement les Phases 3 et 4.
+
+---
+
+## Frictions bloquantes par phase
+
+Les 9 frictions BLOQUANT doivent être résolues **AVANT** la phase concernée :
+
+| Phase | Frictions à résoudre | Arbitrage nécessaire |
+|:-----:|---------------------|---------------------|
+| 0 | FRIC-501 (Magasin sans référentiel), FRIC-503 (Pays absent), FRIC-504 (Devise absente), FRIC-101 (Article 4 noms) | Qui est maître pour Article ? Quelle granularité pour Site/Magasin ? |
+| 1 | FRIC-103 (stock « disponible » 4 définitions) | Quelle définition par contexte (ATP, réservé, physique, transit) ? |
+| 2 | FRIC-301 (POS sync + async), FRIC-601 (fidélité circulaire), FRIC-201 (flux POS→SE absent) | Le POS interroge-t-il le stock central ou local ? La fidélité est-elle synchrone ou asynchrone ? |
+| 3 | FRIC-206 (Factur-X GC→FC), FRIC-602 (cross-docking sans orchestrateur) | Qui génère la facture Factur-X ? Qui orchestre le cross-docking ? |

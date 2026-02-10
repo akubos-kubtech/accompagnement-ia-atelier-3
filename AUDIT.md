@@ -248,6 +248,27 @@
 
 ---
 
+## 2026-02-10 — Séquencement d'implémentation par phases (Exploration étape 3 bis)
+
+**Action** : Refonte complète du séquencement d'implémentation dans matrice-dependances.md. Classification rigoureuse des 26 dépendances (structurelles vs transactionnelles/bouchonnables), séquencement en 5 phases (vs 6 précédemment) avec parallélisme maximisé, chemin critique formalisé.
+
+**Fichiers modifiés** :
+- `exploration/matrice-dependances.md` : remplacement des sections "Graphe de dépendances" et "Proposition de séquencement" par 6 nouvelles sections (classification, 5 phases détaillées, visualisation, chemin critique, frictions par phase)
+
+**Changements clés vs version précédente** :
+- **AA avancé de Phase 3 à Phase 2** (parallèle avec GC) — AA ne dépend pas structurellement de GC, seulement des référentiels (Phase 0) et du stock SE (Phase 1)
+- **SC avancé de Phase 4 à Phase 3** (parallèle avec FC) — conséquence logique de l'avancement de AA
+- **Résultat** : 5 phases au lieu de 6, parallélisme accru (2 modules par phase aux Phases 1-3)
+- Classification explicite : 2 dépendances structurelles (GC→CM, SC→SE), 24 transactionnelles bouchonnables
+- Chemin critique formalisé : 2 chemins de longueur 5 convergent sur GC (nœud critique)
+- Mapping des 9 frictions BLOQUANT sur les phases où elles doivent être résolues
+
+**Justification de la refonte** :
+- Le séquencement précédent plaçait AA après GC (Phase 3) sans justification dans la matrice — AA et GC n'ont aucune dépendance mutuelle
+- La distinction structurelle/transactionnelle n'était pas formalisée, rendant les choix de séquencement opaques
+
+---
+
 ## 2026-02-10 — Matrice de dépendances inter-modules (Exploration étape 3)
 
 **Action** : Construction de la matrice de dépendances 7×7 à partir des flux inter-modules (46 flux), des entités partagées (16) et des zones de friction (30). Analyse structurelle complète avec profils de modules, chemins critiques et proposition de séquencement.
