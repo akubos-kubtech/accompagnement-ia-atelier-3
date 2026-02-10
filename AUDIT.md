@@ -248,6 +248,35 @@
 
 ---
 
+## 2026-02-10 — Matrice de dépendances inter-modules (Exploration étape 3)
+
+**Action** : Construction de la matrice de dépendances 7×7 à partir des flux inter-modules (46 flux), des entités partagées (16) et des zones de friction (30). Analyse structurelle complète avec profils de modules, chemins critiques et proposition de séquencement.
+
+**Fichiers modifiés** :
+- `exploration/matrice-dependances.md` : remplacé le template vide par la matrice complète
+
+**Résultats clés** :
+- Matrice 7×7 avec détail de chaque dépendance (nature, flux référencé, criticité, contournabilité)
+- 2 goulots d'étranglement : SE (5 dépendants, donnée stock temps-sensible) et GC (5 dépendants, producteur d'événements métier)
+- 1 module consommateur : RB (dépend de 6/6, personne ne dépend de lui sauf SC/IA)
+- 1 module autonome : CM (solde +2, ne dépend que de GC)
+- 3 chemins critiques identifiés : cycle de vente web (6 modules, 8 flux), cycle d'achat (4 modules, 6 flux), valorisation/clôture (3 modules, séquentiel strict)
+- Séquencement en 6 phases proposé : référentiels → SE+CM → GC (pivot) → AA+FC → SC → RB
+
+**Sources croisées** :
+- `exploration/flux-inter-modules.md` (46 flux, références FLUX-xxx)
+- `exploration/reconciliation-entites.md` (16 entités partagées)
+- `exploration/zones-friction.md` (30 frictions, références FRIC-xxx)
+- `exigences-transverses/non-fonctionnelles.md` (SLA, modes dégradés)
+- `00-contexte/integrations-cibles.md` (WMS Manhattan, POS Cegid)
+
+**Décisions** :
+- GC identifié comme goulot le plus critique (arrêt total de la chaîne si indisponible) vs SE comme goulot le plus techniquement sensible (latence stock)
+- Phase 0 (référentiels transverses) ajoutée comme prérequis absolu — les 4 référentiels manquants (FRIC-501/503/504 + Article unifié) doivent être définis avant tout
+- SE et CM proposés en parallèle en phase 1 car indépendants l'un de l'autre
+
+---
+
 ## 2026-02-10 — Correction du référentiel Article dans referentiels-transverses.md
 
 **Action** : Correction de deux erreurs identifiées par traçage des sources CDC dans `00-contexte/referentiels-transverses.md`.

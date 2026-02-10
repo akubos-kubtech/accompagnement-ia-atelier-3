@@ -48,5 +48,5 @@
 
 - [x] Cartographie des flux inter-modules (46 flux, 5 absents critiques)
 - [x] Zones de friction (29 frictions, 8 bloquantes)
-- [ ] Matrice de dépendances
+- [x] Matrice de dépendances (7×7, 2 goulots SE+GC, séquencement 6 phases)
 - [ ] Questions d'arbitrage
