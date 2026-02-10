@@ -40,8 +40,8 @@
 
 ## Phase 5 : Réconciliation et cohérence
 
-- [ ] Vérification des entités partagées entre domaines
-- [ ] Identification des incohérences inter-domaines
+- [x] Vérification des entités partagées entre domaines
+- [x] Identification des incohérences inter-domaines
 - [ ] Consolidation du glossaire
 
 ## Phase 6 : Préparation de la zone d'exploration (TP)

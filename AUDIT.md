@@ -164,6 +164,29 @@
 
 ---
 
+## 2026-02-10 — Réconciliation des entités inter-domaines (Phase 5)
+
+**Action** : Analyse systématique des 16 entités apparaissant dans plusieurs modules. Comparaison des définitions, attributs et détection des écarts. Production du document de réconciliation.
+
+**Fichiers créés** :
+- `exploration/reconciliation-entites.md` : analyse complète avec tableau de synthèse, détail par entité (16 fiches), matrice des 8 écarts critiques, 8 questions d'arbitrage pour le client
+
+**Fichiers modifiés** :
+- `PROGRESS.md` : Phase 5 — vérification entités partagées et identification incohérences marquées terminées
+
+**Résultats clés** :
+- 16 entités partagées identifiées sur les 7 domaines
+- 4 entités jugées cohérentes (OUI) : Commande client, Mouvement de stock, Écriture comptable, Facture
+- 11 entités partiellement cohérentes (PARTIEL) : Article, Client, Fournisseur, Commande fournisseur, Stock, Réception, Promotion, Expédition, Indicateurs/KPI, Prévision de vente
+- 1 entité incohérente (NON) : Entrepôt/Site de stockage/Magasin (3 noms, aucune définition unifiée)
+- 8 écarts critiques identifiés (E1-E8), dont 4 de sévérité haute
+
+**Décisions** :
+- L'analyse s'appuie sur les 21 fichiers d'analyse de domaine (entites.md, specifications.md, regles-gestion.md) et le référentiel transverses existant
+- Les questions d'arbitrage (8) sont formulées pour alimenter directement l'atelier d'exploration
+
+---
+
 ## 2026-02-10 — Correction du référentiel Article dans referentiels-transverses.md
 
 **Action** : Correction de deux erreurs identifiées par traçage des sources CDC dans `00-contexte/referentiels-transverses.md`.
