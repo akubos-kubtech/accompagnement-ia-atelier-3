@@ -22,7 +22,7 @@
 | [Promotion / Tarif](#11--promotion--tarif) | GC, CM | **PARTIEL** | Moyenne |
 | [Expédition](#12--expédition) | SC, SE | **PARTIEL** | Moyenne |
 | [Écriture comptable](#13--écriture-comptable) | FC, SE | **OUI** | — |
-| [Facture](#14--facture) | FC, AA, GC | **OUI** | Basse |
+| [Facture](#14--facture) | FC, AA, GC | **PARTIEL** | Haute |
 | [Indicateur / KPI](#15--indicateur--kpi) | SC, FC, RB | **PARTIEL** | Moyenne |
 | [Prévision de vente](#16--prévision-de-vente) | SC, RB | **PARTIEL** | Moyenne |
 
@@ -277,9 +277,14 @@ FC est le maître. SE est un producteur d'écritures (via valorisation stock et 
 |--|----|----|-----|
 | **Attributs** | N° facture, type (client/fournisseur), date, montant HT/TVA/TTC, format Factur-X, statut | Implicite dans three-way matching | Implicite (facture client liée à commande) |
 
-**Cohérent ?** : **OUI**
+**Cohérent ?** : **PARTIEL**
 
-FC est clairement le maître de la Facture. Ni AA ni GC ne définissent la facture dans leurs entités. Point mineur : le CDC mentionne que la facture client est liée à la Commande (GC) et la facture fournisseur au three-way (AA/SE/FC), mais ces liens ne sont pas formalisés dans les entités GC et AA.
+**Écarts détectés** :
+1. **Propriété sans alimentation** — FC est le maître de l'entité Facture et porte la facturation électronique (RG-FC-08 : Factur-X, RG-FC-09 : e-reporting B2C). Mais GC — qui détient les données commerciales nécessaires à la génération d'une facture conforme (lignes de commande, articles, prix unitaires, TVA par taux, adresse client) — ne modélise pas la facture dans ses entités et ne décrit aucun processus de facturation.
+2. **FLUX-A05 insuffisant** — Le flux GC→FC transporte des « données pour écriture comptable » (montant, TVA, compte, pièce). Mais une écriture comptable et une facture Factur-X sont deux objets distincts : la facture exige le détail ligne par ligne.
+3. **Déclenchement non défini** — Aucun domaine ne décrit quel événement (encaissement ? livraison ? batch ?) déclenche la génération de la facture client.
+
+**Recommandation** : Clarifier la responsabilité de génération (GC déclenche avec les données détaillées, FC formalise et émet). Enrichir le flux GC→FC pour couvrir la facture Factur-X, pas seulement l'écriture comptable. Voir zones-friction.md FRIC-206.
 
 ---
 

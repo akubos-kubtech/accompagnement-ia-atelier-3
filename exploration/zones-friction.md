@@ -7,12 +7,12 @@
 | Type de friction | Nombre | Bloquants | Majeurs | Mineurs |
 |-----------------|:------:|:---------:|:-------:|:-------:|
 | 1 — Incohérences de définition | 6 | 1 | 4 | 1 |
-| 2 — Flux orphelins | 5 | 1 | 3 | 1 |
+| 2 — Flux orphelins | 6 | 2 | 3 | 1 |
 | 3 — Hypothèses contradictoires | 5 | 2 | 2 | 1 |
 | 4 — Règles de gestion en conflit | 5 | 1 | 3 | 1 |
 | 5 — Référentiels non définis | 4 | 1 | 2 | 1 |
 | 6 — Séquencement impossible | 4 | 2 | 2 | 0 |
-| **Total** | **29** | **8** | **16** | **5** |
+| **Total** | **30** | **9** | **16** | **5** |
 
 ---
 
@@ -215,6 +215,33 @@ De plus, une transaction caisse unique déclenche **simultanément** :
 **Impact** : Création manuelle des comptes tiers en comptabilité. Désynchronisation entre le référentiel client et la comptabilité auxiliaire. Risque d'erreur sur les conditions de paiement.
 
 > Réf. : flux-inter-modules.md FLUX-F03, reconciliation-entites.md §2
+
+---
+
+### FRIC-206 — Facture client : FC la possède, GC ne la déclenche pas, personne ne l'alimente
+
+| Propriété | Valeur |
+|-----------|--------|
+| **Type** | 2 — Flux orphelin (besoin sans émetteur suffisant) |
+| **Modules** | GC, FC |
+| **Sévérité** | **BLOQUANT** |
+
+**Description** : FC définit l'entité « Facture » (N° facture, type, date, montant HT/TVA/TTC, format Factur-X, statut) et porte la facturation électronique (RG-FC-08 : émission Factur-X, RG-FC-09 : e-reporting B2C). GC modélise le cycle de vente jusqu'à l'encaissement — **le mot « facture » n'apparaît pas dans les entités, processus ni règles de gestion de GC**.
+
+Le FLUX-A05 (GC→FC) transporte des « données de vente pour écriture comptable (montant, TVA, compte, pièce) ». Mais une **écriture comptable** et une **facture Factur-X** sont deux objets distincts :
+- L'écriture comptable est un enregistrement agrégé (journal, débit, crédit)
+- La facture Factur-X est un document légal structuré avec le détail ligne par ligne (articles, quantités, prix unitaires, TVA par taux, coordonnées client, etc.)
+
+Le flux FLUX-A05 tel que décrit est **insuffisant pour alimenter la génération d'une facture conforme**. FC a besoin du détail commercial complet (lignes de commande, articles, adresses) que seul GC détient — mais GC ne le produit pas.
+
+**Trois questions non tranchées** :
+1. **Qui déclenche** la facturation ? L'encaissement GC ? La livraison SC ? Un batch FC quotidien ?
+2. **Quelles données** transitent ? Le détail article/ligne est nécessaire pour Factur-X mais absent du flux documenté
+3. **Pour la facture fournisseur** : FC la reçoit de l'extérieur (EDI/Factur-X), mais c'est AA qui porte la commande et la réception. Le rapprochement three-way (RG-FC-05) suppose que FC a accès aux données AA, sans flux d'alimentation détaillé
+
+**Impact** : La facturation électronique est une **obligation légale** (Factur-X en France, SDI en Italie, SII en Espagne). Sans processus clair de génération, risque de non-conformité réglementaire. De plus, le e-reporting B2C (RG-FC-09) nécessite les données de chaque transaction — y compris POS.
+
+> Réf. : FC entites.md (Facture), GC entites.md (absence), RG-FC-04, RG-FC-08, RG-FC-09, flux-inter-modules.md FLUX-A05, reconciliation-entites.md §14
 
 ---
 
@@ -614,6 +641,7 @@ Si le stock physique réel à t4 ne correspond plus à la réservation de t0, le
 | FRIC-203 | | | | | | | X |
 | FRIC-204 | X | | | X | | | |
 | FRIC-205 | | | | X | | X | |
+| FRIC-206 | X | | | X | | | |
 | FRIC-301 | X | | | | X | X | |
 | FRIC-302 | X | | | | X | | |
 | FRIC-303 | | X | X | | | | |
@@ -632,15 +660,15 @@ Si le stock physique réel à t4 ne correspond plus à la réservation de t0, le
 | FRIC-602 | | X | X | | X | | |
 | FRIC-603 | | X | | X | X | | |
 | FRIC-604 | X | | X | | X | | |
-| **Total** | **18** | **9** | **12** | **13** | **14** | **9** | **3** |
+| **Total** | **19** | **9** | **12** | **14** | **14** | **9** | **3** |
 
 ### Domaines les plus exposés
 
 | Rang | Domaine | Frictions | Bloquantes |
 |:----:|---------|:---------:|:----------:|
-| 1 | **GC** (Gestion commerciale) | 18 | 4 |
+| 1 | **GC** (Gestion commerciale) | 19 | 5 |
 | 2 | **SE** (Stocks & Entrepôts) | 14 | 4 |
-| 3 | **FC** (Finance & Comptabilité) | 13 | 1 |
+| 3 | **FC** (Finance & Comptabilité) | 14 | 2 |
 | 4 | **SC** (Supply Chain) | 12 | 2 |
 | 5 | **CM** (CRM & Marketing) | 9 | 3 |
 | 6 | **AA** (Achats & Appro) | 9 | 2 |
@@ -652,6 +680,7 @@ Si le stock physique réel à t4 ne correspond plus à la réservation de t0, le
 |--------|:-----------------:|-------------|
 | **GC ↔ CM** | 7 | Fidélité/tarification, client, promotions, POS |
 | **GC ↔ SE** | 7 | Stock disponible, vente POS, réservation/picking |
+| **GC ↔ FC** | 4 | Facture, encours client, écritures vente/avoir |
 | **AA ↔ SC** | 4 | Réappro seuil/MRP, proposition→commande |
 | **SE ↔ FC** | 4 | Valorisation, inventaire, stock disponible |
 | **AA ↔ FC** | 3 | Three-way matching, prix de revient |

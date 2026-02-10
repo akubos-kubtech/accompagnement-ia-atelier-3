@@ -164,6 +164,22 @@
 
 ---
 
+## 2026-02-10 — Ajout FRIC-206 Facture et correction reconciliation §14
+
+**Action** : Ajout d'une friction bloquante manquante (FRIC-206 — Facture : FC la possède, GC ne l'alimente pas) identifiée par revue croisée. Correction de l'évaluation initiale de la Facture dans la réconciliation des entités (OUI → PARTIEL).
+
+**Fichiers modifiés** :
+- `exploration/zones-friction.md` : ajout FRIC-206 (type 2 — flux orphelin, BLOQUANT), mise à jour synthèse (30 frictions, 9 bloquantes), matrice et compteurs domaines
+- `exploration/reconciliation-entites.md` : §14 Facture réévalué de OUI/Basse à PARTIEL/Haute, ajout de 3 écarts détectés et recommandation
+
+**Justification** :
+- FC définit l'entité Facture et porte Factur-X (RG-FC-08) — obligation légale
+- GC détient les données commerciales nécessaires (lignes, articles, prix, TVA par taux) mais ne modélise pas la facture
+- Le FLUX-A05 (GC→FC) transporte des données pour écriture comptable, pas pour facture Factur-X — objet distinct
+- L'évaluation initiale sous-estimait l'écart en raisonnant uniquement sur la propriété de l'entité, sans analyser l'alimentation et le déclenchement
+
+---
+
 ## 2026-02-10 — Détection des zones de friction (Exploration étape 2)
 
 **Action** : Croisement systématique de toutes les analyses inter-domaines (réconciliation entités, cartographie flux, règles de gestion, ENF, intégrations cibles) pour identifier les zones de friction.
