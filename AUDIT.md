@@ -164,6 +164,28 @@
 
 ---
 
+## 2026-02-10 — Cartographie des flux inter-modules (Exploration étape 1)
+
+**Action** : Identification systématique de tous les flux de données entre les 7 domaines fonctionnels à partir des spécifications, entités, règles de gestion et intégrations cibles.
+
+**Fichiers modifiés** :
+- `exploration/flux-inter-modules.md` : remplacé le template vide par la cartographie complète
+
+**Résultats clés** :
+- 46 flux identifiés au total, répartis en 7 catégories (vente, achat, supply chain, finance, référentiels, CRM, reporting)
+- 31 flux documentés dans les SF, 10 implicites (déduits par croisement), 5 absents (non documentés mais nécessaires)
+- 5 flux absents critiques : libération stock sur annulation (HAUTE), contrôle encours client (HAUTE), retour règlement fournisseur, alimentation compte tiers client, intégration alertes IA
+- 7 dépendances cachées entre règles de gestion et données d'autres domaines
+- 3 chronologies détaillées (commande web, réception fournisseur, clôture mensuelle)
+- Matrice des flux inter-domaines : couples les plus chargés = GC↔SE (4), AA→FC (4), GC↔CM (5)
+
+**Décisions** :
+- Numérotation par catégorie (FLUX-A01 à FLUX-G05) pour faciliter les références croisées
+- Les flux vers le Reporting (RB) sont consolidés dans un flux unique (FLUX-G01) car tous les domaines alimentent la BI
+- 5 questions d'arbitrage formulées pour l'atelier
+
+---
+
 ## 2026-02-10 — Réconciliation des entités inter-domaines (Phase 5)
 
 **Action** : Analyse systématique des 16 entités apparaissant dans plusieurs modules. Comparaison des définitions, attributs et détection des écarts. Production du document de réconciliation.

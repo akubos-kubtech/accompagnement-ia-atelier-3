@@ -46,7 +46,7 @@
 
 ## Phase 6 : Préparation de la zone d'exploration (TP)
 
-- [ ] Template flux inter-modules
-- [ ] Template zones de friction
-- [ ] Template matrice de dépendances
-- [ ] Template questions d'arbitrage
+- [x] Cartographie des flux inter-modules (46 flux, 5 absents critiques)
+- [ ] Zones de friction
+- [ ] Matrice de dépendances
+- [ ] Questions d'arbitrage
